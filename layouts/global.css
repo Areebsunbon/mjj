@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "GillSansStd";
+    src: local("GillSansStd"),
+     url(~assets/fonts/GillSansStd.ttf);
+}
+@font-face {
+    font-family: "Calibri";
+    src: local("Calibri"),
+     url(~assets/fonts/Calibri.ttf);
+}
+
+html {
+    font-family: "GillSansStd";
+}

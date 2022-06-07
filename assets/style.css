@@ -1,0 +1,32 @@
+
+header {
+    background: red;
+}
+body {
+    font-family: "GillSansStd";
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header-top p {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-family: "Calibri";
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.header-top {
+    background-color: #09183d;
+    padding: 12px;
+}
+.header-middle ul {
+    display: inline-flex;
+}
+.header-middle svg {
+    font-size: 25px;
+    height: 16px;
+    padding-right: 10px;
+}
