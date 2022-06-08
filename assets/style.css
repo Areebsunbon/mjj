@@ -1,9 +1,7 @@
 
-header {
-    background: red;
-}
 body {
     font-family: "GillSansStd";
+    overflow: hidden;
 }
 ul {
     list-style: none;
@@ -22,6 +20,12 @@ ul {
     background-color: #09183d;
     padding: 12px;
 }
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 .header-middle ul {
     display: inline-flex;
 }
@@ -29,4 +33,99 @@ ul {
     font-size: 25px;
     height: 16px;
     padding-right: 10px;
+}
+.header-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.search-form {
+    padding: 0px 15px;
+}
+.search-form input#form1 {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ccc !important;
+    width: 90%;
+    font-size: 12px;
+    height: 26px;
+}
+.search-form button.btn.btn-primary {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.right-menu select.form-select {
+    background-color: transparent;
+    border: navajowhite;
+    color: #747474;
+    font-size: 11px;
+    line-height: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.right-menu a{
+    color: #747474;
+    font-size: 11px;
+    line-height: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 22px;
+    text-decoration: none;
+
+}
+.right-menu li {
+    padding: 0px 6px;
+}
+.right-menu svg {
+    font-size: 8px;
+    height: 10px;
+    padding-right: 0;
+    fill: #747474;
+}
+.header-end {
+    text-align: center;
+}
+.header-inner img {
+    width: 16vw;
+}
+.navbar a {
+    color: #08163c;
+    text-transform: uppercase;
+    padding: 1.1vw 0.8vw 0vw 0.8vw;
+    line-height: 3vh;
+    letter-spacing: 0.1vw;
+    text-decoration: none;
+    position: relative;
+}
+ul.navbar {
+    display: inline-flex;
+}
+.navbar a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 4px;
+    background: #09183C;
+    height: 2px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+   
+}
+.navbar a:hover:before {
+   
+    left: 0;
+    right: 0;
+    bottom: -1px;
 }
