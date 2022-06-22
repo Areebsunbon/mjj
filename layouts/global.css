@@ -9,6 +9,6 @@
      url(~assets/fonts/Calibri.ttf);
 }
 
-html {
+body {
     font-family: "GillSansStd";
 }

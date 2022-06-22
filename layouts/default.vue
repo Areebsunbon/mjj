@@ -1,15 +1,26 @@
 <template>
+<div>
   <div class="main-header">
     <AppHeader />
-    <Nuxt />
+    
   </div>
+  <Nuxt />
+    <div class="main-footer">
+      <AppFooter />
+
+    </div>
+  </div>
+
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader"
-export default {
-  components: {
-    AppHeader
+  import AppHeader from "@/components/AppHeader"
+  import AppFooter from "@/components/AppFooter"
+  export default {
+    components: {
+      AppHeader,
+      AppFooter
+    }
   }
-}
+
 </script>
