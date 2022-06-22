@@ -1,7 +1,7 @@
 <template>
   <div>
     <Breadcrumbs />
-    <section class="register-page">
+    <section class="register-page form-input">
       <div class="container">
         <div class="register-form">
 
