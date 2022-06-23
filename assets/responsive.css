@@ -15,27 +15,16 @@
 
     }
     .left-img img {
-        display: none;
+        max-height: 92%;
     }
-    .main-box .row {
-        flex-direction: column-reverse;
+    .shop-section h2 {
+        font-size: 23px;
     }
-    .about-section h2 {
-        font-family: Calibri;
-        margin-top: 10px;
-        font-size: 21px;
-    }
-    .about-section a {
-        font-family: Calibri;
-        font-size: 21px;
-    }
+   
     .about-section {
         padding: 5vh 0px 4vh 0px;
     }
-    .shop-box h2 {
-        margin-top: 10px;
-        font-size: 21px;
-    }
+   
     .instagram-section {
         display: none;
     }
@@ -52,11 +41,40 @@
         font-size: 11px;
         margin: 11px 0px;
     }
+    .banner-full .carousel-caption p {
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding: 2% 11% 5% 11%;
+        margin-bottom: 0;
+    }
+    .banner-full .carousel-caption h5 {
+        font-size: 25px;
+        letter-spacing: 7px;
+    }
+   
    
     
 }
 
 @media(max-width:767px) {
+    .banner-full .carousel-caption h5 {
+        font-size: 20px;
+        letter-spacing: 7px;
+    }
+    .banner-full .carousel-caption p {
+        font-size: 14px;
+        padding: 0;
+        margin-bottom: 25px
+    }
+    .banner-full .carousel-caption {
+        right: 10%; 
+        top: 30%;
+        left: 10%;
+    }
+    .banner-full .carousel-caption a {
+        font-size: 11px;
+        padding: 11px 30px;
+    }
     .submit-area {
         align-items: start;
         flex-flow: column;
@@ -90,27 +108,15 @@
         font-weight: 500;
     }
     /* Header end*/
-    .left-img img {
-        display: none;
+    
+     h2 {
+        font-size: 23px;
     }
-    .main-box .row {
-        flex-direction: column-reverse;
+    .m-same {
+        margin: 15px;
     }
-    .about-section h2 {
-        font-family: Calibri;
-        margin-top: 10px;
-        font-size: 16px;
-    }
-    .about-section a {
-        font-family: Calibri;
-        font-size: 16px;
-    }
-    .about-section {
-        padding: 5vh 0px 4vh 0px;
-    }
-    .shop-box h2 {
-        margin-top: 10px;
-        font-size: 16px;
+    .shop-section h2 {
+        font-size: 23px;
     }
     .instagram-section {
         display: none;

@@ -8,17 +8,25 @@
     <section class="about-section">
       <div class="container">
         <div class="main-box">
+          <h2>FABULOUS Gifts</h2>
           <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="left-img">
-                <h2>FABULOUS GIFT</h2>
-                <a href="#">VIEW</a>
-                <img src="~/assets/images/homepagegiftsJan.jpg">
-              </div>
+            <div class="col-md-4 left-img">
+                <img src="~/assets/images/fab1.png">
             </div>
-            <div class="col-lg-9 col-md-12 col-sm-12">
+            <div class="col-md-8">
               <div class="about-img">
-                <img src="~/assets/images/homepagegiftsJan22.jpg">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="~/assets/images/fab2.png">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="~/assets/images/fab3.png">
+                  </div>
+                  <div class="col-md-6">
+                    <img src="~/assets/images/fab4.png">
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -31,23 +39,23 @@
 
      <section class="shop-section">
       <div class="container">
-        <div class="shop-box">
+     
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="box-shop1"> 
+            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+              <div class="box-shop1 m-same img-hover-zoom"> 
                 <img src="~/assets/images/shop-for-him.jpg">
                 <h2>Shop For Him</h2>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="box-shop2"> 
+            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+              <div class="box-shop2 m-same img-hover-zoom"> 
                 <img src="~/assets/images/shop-for-her.jpg">
                 <h2>Shop For Her</h2>
               </div>
             </div>
           </div>
 
-        </div>
+        
       </div>
 
 

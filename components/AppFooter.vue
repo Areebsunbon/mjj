@@ -2,7 +2,12 @@
   <footer>
     <div class="container">
       <div class="row footer-area">
-        <div class="col-sm-12 col-md-8 col-lg-8">
+        <img src="~/assets/images/polygon.png" class="icon-arrow">
+        <div class="col-md-12 fav-footer">
+          <img src="~/assets/images/fav.png">
+
+        </div>
+        <div class="col-md-12">
           <div class="footer-menu">
             <div class="menu-col">
               <h2> About Us </h2>
@@ -37,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="col-md-12 footer-bottom">
           <div class="footer-link">
             <div class="menu-col">
               <h2> Follow Us On </h2>
@@ -72,6 +77,10 @@
                 </li>
               </ul>
             </div>
+
+          </div>
+          <div class="copyright-sec">
+            <p>Copyright 2022@ Mjaferjees All Rights Reserved</p>
 
           </div>
         </div>

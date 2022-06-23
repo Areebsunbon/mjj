@@ -1,15 +1,49 @@
 <template>
   <section class="banner-section">
     <div class="banner-full">
-      <!-- <b-carousel id="carousel" v-model=" slide" :interval="3500" controls indicators
-        style="text-shadow: 1px 1px 2px #333" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
-        <div v-for="image in Images" :key="image.id">
-          <div v-if="image.id <= 5">
-           <b-carousel-slide :img-src="image.url"> </b-carousel-slide>
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="~/assets/images/slide1.jpg" class="d-block w-100">
+            <div class="carousel-caption">
+              <h5>BE THE DIFFERENCE</h5>
+              <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
+               <nuxt-link to="#">View Product</nuxt-link>
+            </div>
+          </div>
+          <div class="carousel-item">
+             <img src="~/assets/images/slide2.png" class="d-block w-100">
+            <div class="carousel-caption">
+                <h5>BEAUTIFY THE ELEGANE</h5>
+                 <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
+              <nuxt-link to="#">View Product</nuxt-link>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="~/assets/images/slide4.jpg" class="d-block w-100">
+            <div class="carousel-caption">
+               <h5>BEAUTIFY THE ELEGANE</h5>
+                <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
+              <nuxt-link to="#">View Product</nuxt-link>
+            </div>
           </div>
         </div>
-      </b-carousel> -->
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!-- <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button> -->
+      </div>
+      <div class="overlay"></div>
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="~/assets/images/slide1.jpg">
@@ -29,7 +63,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </button>
-      </div>
+      </div> -->
 
     </div>
   </section>

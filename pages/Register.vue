@@ -10,15 +10,9 @@
             <h4>Your Personal Details</h4>
             <form>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label">FIRST NAME</label>
+                <label class="col-sm-2 col-form-label">NAME</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="first-name" placeholder="First Name">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label">LAST NAME</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                  <input type="text" class="form-control" id="first-name" placeholder="Name">
                 </div>
               </div>
               <div class="form-group row">
