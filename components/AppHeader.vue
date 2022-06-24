@@ -88,7 +88,7 @@
       </div>
       <div class="header-end">
         <div class="header-inner">
-          <div class="container-fluid">
+          <div class="container-fluid pl-0 pr-0">
             <div class="row mb-0">
               <div class="col-12">
                 <img src="~/assets/images/mjjlogo.svg">
@@ -96,9 +96,8 @@
               <div class="col-12">
                 <ul class="navbar">
                   <li>
-                    <nuxt-link to="/">Women</nuxt-link>
-                  </li>
-                  <div class="sub-menu">
+                    <nuxt-link to="/" class="nav-main">Women</nuxt-link>
+                    <div class="sub-menu">
                     <div class="container">
                       <div class="row">
                         <div class="col-3">
@@ -146,17 +145,19 @@
                       </div>
                     </div>
                   </div>
+                  </li>
+                  
                   <li>
-                    <nuxt-link to="/about">Men</nuxt-link>
+                    <nuxt-link to="/about" class="nav-main">Men</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/">office</nuxt-link>
+                    <nuxt-link to="/" class="nav-main">office</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/">Travel & Tech</nuxt-link>
+                    <nuxt-link to="/" class="nav-main">Travel & Tech</nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link to="/">Gifts</nuxt-link>
+                    <nuxt-link to="/" class="nav-main">Gifts</nuxt-link>
                   </li>
                 </ul>
               </div>

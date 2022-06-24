@@ -1,17 +1,17 @@
 
-body {
+p{
+    
     font-family: "GillSansStd";
-    overflow-x: hidden;
 }
 h1,
 h3,
 h4,
-p
+h5
 {
-    font-family: "GillSansStd"; 
+    font-family: "Lato-Regular";
 }
 a {
-    font-family: "Calibri";
+    font-family: "GillSansStd";
 }
 ul {
     list-style: none;
@@ -208,23 +208,27 @@ ul.navbar {
 .sub-menu h2 {
     color: #fff;
     line-height: 30px;
-    font-family: GillSansStd;
+    font-family: 'Lato-Regular';
     text-transform: uppercase;
     letter-spacing: 0.14vw;
     display: inline-block;
     margin: 0;
     font-size: 14px;
+    font-weight: 600;
 }
 .sub-menu li a {
     color: #fff;
-    font-family: calibri;
+    font-family: 'Lato-Light';
     padding: 0;
     line-height: 1.9;
     font-size: 13px;
+    letter-spacing: 2px;
     text-transform: capitalize;
     padding-left: 0;
     display: block;
-    width: max-content
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
 }
 .sub-menu .container {
     display: block !important;
@@ -700,13 +704,14 @@ img.insta-img {
     margin-bottom: 5px;
     font-size: 14px;
     color: #09183C;
+    font-family: 'Lato-Regular';
+    font-weight: 600;
 }
 .help-area p {
     color: #5e5e5e;
     line-height: 1.4;
     font-size: 14px;
     margin-bottom: 10px;
-    font-family: Calibri;
     text-align: justify;
 }
 .payment-sec {
@@ -825,8 +830,9 @@ img.insta-img {
 }
 .contactus-layout #v-pills-tab .active {
     line-height: 2;
-    font-family: GillSansStd;
+    font-family: 'Lato-Regular';
     font-size: 11px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #09183C;
     background-color: #eee;
@@ -839,8 +845,9 @@ img.insta-img {
 }
 .contactus-layout #v-pills-tab a {
     line-height: 2;
-    font-family: GillSansStd;
+    font-family: 'Lato-Regular';
     font-size: 11px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #09183C;
     background-color: rgb(255, 255, 255);
@@ -910,7 +917,7 @@ img.insta-img {
 }
 .icon-arrow {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -923,4 +930,15 @@ img.insta-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.copyright-sec p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'Lato-Regular';
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
