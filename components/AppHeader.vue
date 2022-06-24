@@ -88,7 +88,7 @@
       </div>
       <div class="header-end">
         <div class="header-inner">
-          <div class="container-fluid pl-0 pr-0">
+          <div class="container-fluid">
             <div class="row mb-0">
               <div class="col-12">
                 <img src="~/assets/images/mjjlogo.svg">
