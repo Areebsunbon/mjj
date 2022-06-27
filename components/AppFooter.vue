@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  
     <div class="container">
       <div class="row footer-area">
         <img src="~/assets/images/polygon.png" class="icon-arrow">
@@ -91,7 +91,7 @@
     
 
 
-  </footer>
+  
 
 </template>
 

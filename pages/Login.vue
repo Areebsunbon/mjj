@@ -10,14 +10,14 @@
               <span>REGISTER</span>
               <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep
                 track of the orders you have previously made.</p>
-              <nuxt-link to="#">Continue</nuxt-link>
+              <nuxt-link to="#" class="continue-btn">Continue</nuxt-link>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="login-card login-form">
+            <div class="login-card">
               <h2>Returning Customer</h2>
               <span>SIGN IN</span>
-              <form>
+              <form class="login-form">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail">

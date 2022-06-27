@@ -129,7 +129,8 @@ a:hover{
     text-align: center;
 }
 .header-inner img {
-    width: 17vw;
+    max-width: 240px;
+    width: 100%;
     padding: 45px 0px 36px 0px;
 }
 .navbar a {
@@ -143,10 +144,10 @@ a:hover{
     color: #8A8A8A;
     text-transform: uppercase;
     text-decoration: none;
-    position: relative;
     padding-bottom: 4px;
 }
-.navbar li{
+.navbar li:not(.sub-meu .dropdown li) {
+    position: relative;
     padding: 0px 20px;
 }
 ul.navbar {
@@ -161,7 +162,7 @@ ul.navbar {
     left: 0;
     right: 0;
     background-color: #08163c;
-    top: 46px;
+    top: 61px;
     padding: 50px 0px 87px 0px;
     text-align: left;
     z-index: 9999;
@@ -233,13 +234,14 @@ ul.navbar {
 .sub-menu .container {
     display: block !important;
 }
-.navbar a:before {
+
+ .navbar li a:before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 50%;
     right: 50%;
-    bottom: 4px;
+    bottom: -4px;
     background: #09183C;
     height: 2px;
     -webkit-transition-property: left, right;
@@ -250,12 +252,12 @@ ul.navbar {
     transition-timing-function: ease-out;
    
 }
-.navbar a:hover:before {
-   
-    left: 0;
-    right: 0;
-    bottom: -1px;
+.navbar li:hover a:before {
+    left: 20px;
+    right: 20px;
 }
+
+
 .navbar li:hover + .sub-menu {
     display: block;
     -webkit-transition: all 0.5s;
@@ -771,8 +773,8 @@ img.insta-img {
     text-transform: uppercase;
     margin-bottom: 5px;
 }
-.login-card a {
-    padding: 12px 13px;
+.continue-btn {
+    padding: 19px 13px;
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 2px;
@@ -780,6 +782,7 @@ img.insta-img {
     color: #fff;
     background-color: #09183C;
     border-color: #09183C;
+    display: inline-block;
 }
 .login-card .btn {
     padding: 10px 13px;
@@ -854,6 +857,202 @@ img.insta-img {
     border: none;
 }
 /* CONTACT US PAGE END */
+
+/* inquiries page start */
+.image-box img {
+    width: 100%;
+}
+.image-box {
+    background: black;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.image-box-content {
+    background-color: rgba(9, 24, 60, 0.6313725490196078);
+    bottom: 0;
+    color: white;
+    text-align: left;
+    left: 0;
+    padding: 50px 40px 20px 40px;
+    position: absolute;
+    transition: 0.5s padding;
+    top: 0;
+    max-width: 33%;
+    width: 100%;
+}
+.image-box-content h3 {
+    font-size: 18px;
+    font-family: 'Lato-Regular';
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.image-box-content p {
+    font-size: 14px;
+    line-height: 23px;
+    font-family: 'GillSansStd';
+    letter-spacing: 1px;
+    text-align: justify;
+}
+.main-boxpara {
+    color: #5e5e5e;
+    line-height: 1.4;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.further-area {
+    text-align: center;
+}
+.further-area h3 {
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Lato-Regular';
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.further-area a {
+    background-color: #09183C;
+    border-color: #09183C;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 13px;
+    border: 1px solid #09183C;
+    display: inline-block;
+    font-family: 'Lato-Regular';
+    font-weight: 500;
+}
+.further-area a:hover{
+    background-color: transparent;
+    color: #09183C;
+    font-weight: 500;
+
+}
+/* inquiries page end */
+
+/* LOCATOR PAGE START */
+
+.store-locator {
+    background-image: url('./images/store-locator-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+.locator-box {
+    background-color: rgba(8,22,60,0.83922);
+    color: #fff;
+    padding: 50px 40px !important;
+    max-width: 30% !important;
+    margin: 0px 15px;
+}
+.locator-box:hover {
+    background-color: #08163c;
+    
+}
+.locator-menu h3 {
+    font-family: 'Lato-Regular';
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+.locator-menu h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'GillSansStd';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.locator-menu  span {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'GillSansStd';
+    margin-bottom: 5px;
+}
+.locator-menu .border {
+    margin-bottom: 15px;
+}
+
+.locator-menu  h5 {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-family: 'GillSansStd';
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+.locator-menu a:hover{
+    color: #fff;
+}
+.locator-menu a {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'GillSansStd';
+    margin: 0;
+    padding: 0;
+}
+.locator-menu li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-family: 'GillSansStd';
+    letter-spacing: 1px;
+}
+.locator-menu p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.locator-menu svg {
+    width: 13px;
+    fill: #fff;
+    margin-right: 4px;
+}
+.map-area a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.map-area a:hover {
+    color: #fff;
+}
+
+
+/* LOCATOR PAGE END */
+
+/* ACCOUNT PAGE START */
+.account-login {
+    text-align: center;
+    padding: 30px 0px 60px 0px;
+}
+.account-box {
+    padding: 0px 60px;
+}
+.account-box h3 {
+    font-size: 20px;
+    font-family: 'Lato-Regular';
+    font-weight: 600;
+}
+.account-box a {
+    font-size: 14px;
+    margin: 0;
+    color: #08163c;
+}
+.account-box a:hover {
+    color: #08163c;
+}
+.account-box img {
+    width: 100px;
+}
+/* ACCOUNT PAGE END */
+
 /* footer start */
 .main-footer .footer-area {
     margin: 0;

@@ -41,13 +41,13 @@
       <div class="container">
      
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+            <div class="col-md-6 p-0">
               <div class="box-shop1 m-same img-hover-zoom"> 
                 <img src="~/assets/images/shop-for-him.jpg">
                 <h2>Shop For Him</h2>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 p-0">
+            <div class="col-md-6 p-0">
               <div class="box-shop2 m-same img-hover-zoom"> 
                 <img src="~/assets/images/shop-for-her.jpg">
                 <h2>Shop For Her</h2>

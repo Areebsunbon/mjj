@@ -1,14 +1,14 @@
 <template>
 <div>
-  <div class="main-header">
+  <header class="main-header">
     <AppHeader />
     
-  </div>
+  </header>
   <Nuxt />
-    <div class="main-footer">
+    <footer class="main-footer">
       <AppFooter />
 
-    </div>
+    </footer>
   </div>
 
 </template>
