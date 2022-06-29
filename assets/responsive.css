@@ -112,7 +112,12 @@
 .account-box {
     padding: 0px;
 }
-
+.sp-addbag {
+  display: block;
+}
+.sp-addbag h4 {
+  margin-bottom: 12px;
+}
 
 
 
@@ -249,7 +254,21 @@
     height: 10px;
   }
 
-
+  .singleproduct-layout .row {
+    flex-direction: column-reverse;
+}
+.sp-slider .carousel-control-next {
+  right: -14px;
+}
+.sp-slider .carousel-control-prev {
+  left: -13px;
+}
+.sp-main {
+  padding-top: 35%;
+}
+.sp-main .product-color img {
+  width: 20px;
+}
   /* PRODUCT PAGE end */
   .contact-form h4 {
     font-size: 14px;

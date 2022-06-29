@@ -781,8 +781,8 @@ img.insta-img {
     text-transform: uppercase;
     color: #fff;
     background-color: #09183C;
-    border-color: #09183C;
     display: inline-block;
+    border: 1px solid #09183C;
 }
 .login-card .btn {
     padding: 10px 13px;
@@ -1052,6 +1052,154 @@ img.insta-img {
     width: 100px;
 }
 /* ACCOUNT PAGE END */
+
+/* PRODUCT DETAIL PAGE START */
+.sp-title {
+    font-size: 16px;
+    color: #09183C;
+    font-family: 'Lato-Regular';
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.sp-price {
+    font-size: 17px;
+    font-family: 'GillSansStd';
+    margin-left: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.sp-number {
+    font-family: 'Lato-Regular';
+    color: #6D6E70;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
+.sp-main p {
+    padding: 0;
+    text-transform: uppercase;
+    font-family: 'GillSansStd';
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 14px;
+}
+.sp-list li {
+    font-family: 'Lato-Regular';
+    color: #333;
+    font-size: 14px;
+    list-style: disc;
+    line-height: 20px;
+}
+.sp-list {
+    padding-left: 20px;
+}
+.sp-main .product-color {
+    justify-content: start;
+    margin: 0;
+}
+.sp-addbag {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.sp-addbag  h4 {
+    font-size: 13px;
+    margin-right: 10px;
+    font-weight: 600;
+    color: #09183C;
+    text-transform: uppercase;
+    font-family: 'Lato-Regular';
+    letter-spacing: 1px;
+    margin-bottom: 0;
+
+}
+.sp-addbag input {
+    width: 39px;
+    height: 38px;
+}
+.sp-main .continue-btn {
+    padding: 17px 13px;
+}
+.sp-main .continue-btn {
+    padding: 17px 13px;
+    margin: 13px 0px 25px 0px;
+}
+.sp-addbag .continue-btn {
+    margin: 0px 3px 0px 3px;
+}
+#fav-sp {
+    padding: 10px;
+    width: 38px;
+    border: 1px solid #09183C;
+    margin-left: 0;
+}
+.sp-main .continue-btn:hover {
+    background-color: transparent;
+    color: #09183C;
+}
+#fav-sp:hover {
+    background-color: transparent;
+    border: 1px solid #09183C;
+}
+#fav-sp svg {
+    fill: #fff;
+}
+#fav-sp:hover svg {
+    fill: #09183C;
+}
+.singleproduct-layout {
+    padding-top: 20px;
+    padding-bottom: 30vh;
+}
+.sp-slider .carousel-item img {
+    height: auto;
+    object-fit: initial;
+    max-height: 474px;
+    width: 600px;
+    margin: 0 auto;
+}
+.sp-slider .carousel-control-prev-icon {
+   background-image: none;
+}
+.sp-slider .carousel-control-next-icon {
+    background-image: none;
+
+}
+.sp-slider .carousel-indicators li {
+    width: 57px;
+    height: 76px;
+}
+.sp-slider .carousel-indicators {
+    bottom: -23%;
+    align-items: center;
+    justify-content: start;
+    margin-right: 15%;
+    margin-left: 0;
+}
+.sp-slider .carousel-control-prev {
+    left: -24px;
+}
+.sp-slider .carousel-control-prev svg{
+    fill: #000000d4;
+}
+.sp-slider .carousel-control-next {
+    right: -24px;
+}
+.sp-slider .carousel-control-next svg{
+    fill: #000000d4;
+}
+/* PRODUCT DETAIL PAGE END */
+
+/* CHECKOUT PAGE START */
+.payment-tab {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+/* CHECKOUT PAGE END */
 
 /* footer start */
 .main-footer .footer-area {

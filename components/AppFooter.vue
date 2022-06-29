@@ -12,32 +12,32 @@
             <div class="menu-col">
               <h2> About Us </h2>
               <ul>
-                <li><a href="#"> Our History</a> </li>
-                <li><a href="#"> Our Sitemap</a> </li>
+                <li><nuxt-link to="/">Our History</nuxt-link></li>
+               <li> <nuxt-link to="/"> Our Sitemap</nuxt-link></li>
               </ul>
             </div>
             <div class="menu-col">
               <h2> Customer Care </h2>
               <ul>
-                <li><a href="#"> Leather Care </a></li>
-                <li><a href="#"> My Account </a></li>
-                <li> <a href="#">Track My Order</a> </li>
+                <li><nuxt-link to="/"> Leather Care</nuxt-link></li>
+                <li> <nuxt-link to="account"> My Account</nuxt-link></li>
+                 <li><nuxt-link to="/"> Track My Order</nuxt-link></li>
               </ul>
             </div>
             <div class="menu-col">
               <h2> Help </h2>
               <ul>
-                <li> <a href="#">FAQ </a></li>
-                <li><a href="#"> Privacy Policy</a> </li>
-                <li> <a href="#">Terms & Conditions</a> </li>
+                <li><nuxt-link to="help"> FAQ</nuxt-link></li>
+                <li><nuxt-link to="help"> Privacy Policy</nuxt-link></li>
+               <li> <nuxt-link to="help"> Terms & Conditions</nuxt-link></li>
               </ul>
             </div>
             <div class="menu-col">
               <h2> Contact Us </h2>
               <ul>
-                <li><a href="#"> Get In Touch</a> </li>
-                <li><a href="#"> Corporate Inquiries </a></li>
-                <li><a href="#"> Store Locator </a></li>
+                <li><nuxt-link to="contact">Get In Touch</nuxt-link></li>
+                <li><nuxt-link to="contact">Corporate Inquiries</nuxt-link></li>
+               <li> <nuxt-link to="contact">Store Locator</nuxt-link></li>
               </ul>
             </div>
           </div>
