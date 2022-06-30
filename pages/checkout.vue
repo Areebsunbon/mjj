@@ -7,47 +7,61 @@
           <div class="checkout-layout">
             <div class="row">
               <div class="col-md-5">
-                <div class="checkout-bar mb-2">
+                <div class="checkout-bar">
                   <div class="payment-tab">
                     <i> <img src="~/assets/images/book-solid.svg"></i>
                     <h3>Payment details</h3>
                   </div>
                   <div class="checkout-leftbar">
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">NAME</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">NAME</label>
+                      <div class="col-lg-9 col-form-input">
                         <input type="text" class="form-control" id="first-name" placeholder="Name">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">TELEPHONE</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">TELEPHONE</label>
+                      <div class="col-lg-9 col-form-input">
                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Telephone">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">ADDRESS</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">ADDRESS</label>
+                      <div class="col-lg-9 col-form-input">
                         <textarea class="form-control" rows="3" placeholder="ADDRESS"></textarea>
                       </div>
                     </div>
                     <div class="checkout-location">
                       <div class="form-group row">
-                        <label class="col-lg-3 col-md-12 col-form-label">COUNTRY</label>
-                        <div class="col-lg-4 col-md-12">
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Pakistan</option>
+                        <label class="col-lg-3 col-form-label">COUNTRY</label>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Pakistan</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="city-box">
+                                        <label class="col-form-label">CITY</label>
+                                        <div class="city-select">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Karachi</option>
+                                            <option>Attock</option>
+                                            <option>Peshawar</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    
 
-                          </select>
+                                </div>
+                         
+
+                            </div>
+
+
                         </div>
-                         <label class="col-lg-1 col-md-12 col-form-label">CITY</label>
-                         <div class="col-lg-4 col-md-12">
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Karachi</option>
-                            <option>Attock</option>
-                            <option>Peshawar</option>
-                          </select>
-                        </div>
+                        
                       </div>
                       
                     </div>
@@ -69,47 +83,61 @@
 
                   </div>
                 </div>
-                <div class="checkout-bar mb-2">
+                <div class="checkout-bar">
                   <div class="payment-tab">
                     <i> <img src="~/assets/images/copy-regular.svg"></i>
                     <h3>Delivery Details</h3>
                   </div>
                   <div class="checkout-leftbar">
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">NAME</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">NAME</label>
+                      <div class="col-lg-9 col-form-input">
                         <input type="text" class="form-control" id="first-name" placeholder="Name">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">TELEPHONE</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">TELEPHONE</label>
+                      <div class="col-lg-9 col-form-input">
                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Telephone">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-lg-3 col-md-12 col-form-label">ADDRESS</label>
-                      <div class="col-lg-9 col-md-12 col-form-input">
+                      <label class="col-lg-3 col-form-label">ADDRESS</label>
+                      <div class="col-lg-9 col-form-input">
                         <textarea class="form-control" rows="3" placeholder="ADDRESS"></textarea>
                       </div>
                     </div>
-                    <div class="checkout-location">
+                     <div class="checkout-location">
                       <div class="form-group row">
-                        <label class="col-lg-3 col-md-12 col-form-label">COUNTRY</label>
-                        <div class="col-lg-4 col-md-12">
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Pakistan</option>
+                        <label class="col-lg-3 col-form-label">COUNTRY</label>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Pakistan</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="city-box">
+                                        <label class="col-form-label">CITY</label>
+                                        <div class="city-select">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Karachi</option>
+                                            <option>Attock</option>
+                                            <option>Peshawar</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    
 
-                          </select>
+                                </div>
+                         
+
+                            </div>
+
+
                         </div>
-                         <label class="col-lg-1 col-md-12 col-form-label">CITY</label>
-                         <div class="col-lg-4 col-md-12">
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Karachi</option>
-                            <option>Attock</option>
-                            <option>Peshawar</option>
-                          </select>
-                        </div>
+                        
                       </div>
                       
                     </div>
@@ -122,7 +150,7 @@
               <div class="col-md-7">
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="checkout-bar mb-2">
+                    <div class="checkout-bar">
                       <div class="payment-tab">
                         <i> <img src="~/assets/images/book-solid.svg"></i>
                         <h3>Shipping Method</h3>
@@ -141,7 +169,7 @@
 
                   </div>
                   <div class="col-md-6">
-                    <div class="checkout-bar mb-2">
+                    <div class="checkout-bar">
                       <div class="payment-tab">
                         <i> <img src="~/assets/images/book-solid.svg"></i>
                         <h3>Payment Method</h3>
@@ -172,7 +200,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <div class="checkout-bar mb-2">
+                    <div class="checkout-bar">
                       <div class="payment-tab">
                         <i> <img src="~/assets/images/shopping-cart-solid.svg"></i>
                         <h3>Shipping Cart (0.25kg)</h3>
@@ -268,7 +296,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <div class="checkout-bar mb-2">
+                    <div class="checkout-bar">
                       <div class="checkout-leftbar right-layout">
                         <div class="message-area">
                             <label>Add Comment About Your Order</label>

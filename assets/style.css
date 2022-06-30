@@ -1313,6 +1313,14 @@ img.insta-img {
     font-family: 'GillSansStd';
     color: #858383;
 }
+.city-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.city-select {
+    width: 100%;
+}
 .right-layout input#quantity {
     width: 40px;
     height: 25px;
@@ -1419,6 +1427,7 @@ img.insta-img {
     text-transform: uppercase;
     font-size: 15px;
     font-family: 'GillSansStd';
+    display: block;
     letter-spacing: 1px;
 }
 .checkout-bar .btn-confirm:hover {
