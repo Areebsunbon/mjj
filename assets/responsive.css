@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media(max-width:1024px) {
 
   /* Header start */
   .mobile-header {
@@ -30,8 +30,8 @@
   }
 
   .about-section {
-    padding: 5vh 0px 4vh 0px;
-  }
+    padding: 40px 0px 0px 0px;
+}
 
   .instagram-section {
     display: none;
@@ -118,7 +118,38 @@
 .sp-addbag h4 {
   margin-bottom: 12px;
 }
-
+.coupon-area {
+  align-items: normal;
+  flex-direction: column;
+  justify-content: start;
+ }
+ .coupon-area h3 {
+  margin-bottom: 7px;
+}
+.right-layout .table-edit {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.right-layout .table-edit a.nuxt-link-active {
+  padding-left: 0;
+}
+.btn-quantity .btn {
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom:5px;
+}
+.btn-quantity .input-group {
+  flex-direction: column;
+}
+.right-layout input#quantity {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #09183C;
+  margin-bottom: 5px;
+}
+.checkout-leftbar .col-form-label {
+  font-size: 11px;
+}
 
 
 }
@@ -299,6 +330,35 @@
   .locator-box {
     max-width: 100% !important;
     margin: 20px 15px;
+}
+.coupon-area {
+  align-items: normal;
+  flex-direction: column;
+  justify-content: start;
+ }
+ .coupon-area h3 {
+  margin-bottom: 7px;
+}
+.right-layout .table-edit {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.right-layout .table-edit a.nuxt-link-active {
+  padding-left: 0;
+}
+.btn-quantity .btn {
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom:5px;
+}
+.btn-quantity .input-group {
+  flex-direction: column;
+}
+.right-layout input#quantity {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #09183C;
+  margin-bottom: 5px;
 }
   .footer-area {
     margin: 0 !important;

@@ -64,7 +64,6 @@
       <div class="container">
         <div class="main-insta">
           <h2>connect with us</h2>
-          <img src="~/assets/images/timeline-logo.png">
           <img src="~/assets/images/instgram.png" class="insta-img">
 
 

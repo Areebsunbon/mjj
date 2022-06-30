@@ -32,6 +32,7 @@ a:hover{
 }
 .header-code p {
     margin: 0;
+    font-weight: bold;
     text-align: center;
     color: #D6A071;
     font-family: 'Lato-Regular';
@@ -59,7 +60,7 @@ a:hover{
     font-size: 25px;
     height: 16px;
     padding-right: 10px;
-    fill: #9D9D9D;
+    fill: #6a6565;
 }
 .search-form svg {
     fill: #D6A071;
@@ -91,9 +92,10 @@ a:hover{
 .right-menu select.form-select {
     font-family: 'Lato-Regular';
     background-color: transparent;
-    color: #8A8A8A;
-    border: none;
+    color: #6a6565;
     font-size: 12px;
+    font-weight: 600;
+    border: none;
     line-height: 0;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -104,7 +106,8 @@ a:hover{
 .right-menu a {
     font-family: 'Lato-Regular';
     background-color: transparent;
-    color: #8A8A8A;
+    color: #6a6565;
+    font-weight: 600;
     border: none;
     font-size: 12px;
     line-height: 0;
@@ -131,17 +134,18 @@ a:hover{
 .header-inner img {
     max-width: 240px;
     width: 100%;
-    padding: 45px 0px 36px 0px;
+    padding: 24px 0px 22px 0px;
 }
 .navbar a {
-    color: #8A8A8A;
+    color: #6a6565;
     font-size: 15px;
+    font-weight: 600;
     font-family: 'Lato-Regular';
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 .navbar a:hover {
-    color: #8A8A8A;
+    color: #6a6565;
     text-transform: uppercase;
     text-decoration: none;
     padding-bottom: 4px;
@@ -344,7 +348,7 @@ nav#sidenav-1 {
 }
 .banner-full img {
     width: 100%;
-    height: 560px;
+    height: 460px;
     object-fit: cover;
 }
 .banner-full .carousel-caption {
@@ -393,7 +397,7 @@ nav#sidenav-1 {
 }
 /* about section start */
 .about-section {
-    padding: 60px 0px 40px 0px;
+    padding: 40px 0px 40px 0px;
     text-align: center;
 }
 .about-section img {
@@ -401,7 +405,7 @@ nav#sidenav-1 {
     border-radius: 10px;
 }
 .main-box h2 {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 .about-img img {
     margin-bottom: 30px;
@@ -481,15 +485,15 @@ nav#sidenav-1 {
 /* INSTGRAM SECTION START */
 .instagram-section {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .main-insta h2 {
-    text-transform: uppercase;
+    text-transform: lowercase;
     margin: 0;
-   
+    font-size: 22px;
+    font-weight: 700;
 }
 .main-insta img {
-
     padding: 30px 0px 0px 0px;
 }
 img.insta-img {
@@ -949,8 +953,8 @@ img.insta-img {
     background-color: rgba(8,22,60,0.83922);
     color: #fff;
     padding: 50px 40px !important;
-    max-width: 30% !important;
-    margin: 0px 15px;
+    /* max-width: 30% !important;
+    margin: 0px 15px; */
 }
 .locator-box:hover {
     background-color: #08163c;
@@ -1209,7 +1213,7 @@ img.insta-img {
     color: inherit;
     font-weight: 700;
     font-family: 'Lato-Regular';
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-left: 10px;
 }
 .payment-tab img {
@@ -1217,21 +1221,24 @@ img.insta-img {
 }
 .checkout-leftbar {
     background-color: #FBFBFB;
-    padding: 40px 23px 20px 23px;
+    padding: 30px 23px 20px 23px;
 }
-.checkout-leftbar .form-group {
+/* .checkout-leftbar .form-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
+} */
 .checkout-leftbar .col-form-label {
-    width: 100px !important;
     font-size: 13px;
+    padding-right: 20px;
     font-family: 'GillSansStd';
     text-transform: uppercase;
     width: max-content;
     color: #4e4e4e;
+}
+.checkout-leftbar textarea.form-control {
+    border: 1px solid #A2A2A2;
 }
 .checkout-leftbar .col-form-input {
     width: 100%;
@@ -1250,14 +1257,178 @@ img.insta-img {
     border-radius: 0;
     text-transform: capitalize;
 }
-.checkout-leftbar {
-    background-color: #FBFBFB;
-    padding: 40px 23px 20px 23px;
+.right-layout {
+    padding: 10px 17px 20px 17px;
 }
 .checkbox-checkout label.form-check-label {
     font-size: 13px;
     text-transform: uppercase;
     font-family: 'GillSansStd';
+}
+.right-layout label.form-check-label {
+    font-size: 13px;
+    font-family: 'GillSansStd';
+    text-transform: capitalize;
+    color: #4e4e4e;
+}
+.right-layout .form-check-input {
+    margin-top: 7px;
+}
+.right-layout thead tr {
+    background-color: #EBEBEB;
+    font-size: 13px;
+    font-family: 'Lato-Regular';
+    font-weight: 300 !important;
+}
+.right-layout thead  th {
+    padding: 10px 11px;
+    border-bottom: 1px solid #dee2e6 !important;
+}
+.right-layout tbody th img {
+    width: 60px;
+    object-fit: cover;
+    height: 70px;
+}
+.right-layout tbody th li {
+    font-size: 13px;
+    font-family: 'GillSansStd';
+    color: #858383;
+}
+.right-layout .table-edit li {
+    font-size: 12px;
+    color: #545353;
+    text-decoration: underline;
+}
+.right-layout .table-edit a.nuxt-link-active {
+    padding-left: 12px;
+    color: #545353;
+}
+.right-layout .table-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-layout td {
+    font-size: 13px;
+    font-family: 'GillSansStd';
+    color: #858383;
+}
+.right-layout input#quantity {
+    width: 40px;
+    height: 25px;
+    border-left: 0;
+    border-right: 0;
+    border-color: #09183C;
+}
+.btn-quantity img {
+    width: 12px;
+}
+.btn-quantity .btn {
+    padding: 2px 10px;
+    border-radius: 0;
+    line-height: 0;
+}
+.btn-quantity .btn{
+    padding: 3px 10px;
+    border-radius: 0;
+    line-height: 0;
+    background-color: #09183C;
+    border: none;
+}
+.btn-quantity .btn:focus{
+    box-shadow: none;
+}
+.btn-quantity button.quantity-left-minus {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.btn-quantity .close-btn .quantity-close {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.coupon-area {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px 0px 30px 0px;
+}
+.coupon-area h3 {
+    font-size: 14px;
+    font-family: 'GillSansStd';
+    color: #7c7b7b;
+    padding-right: 15px;
+    margin: 0;
+}
+.coupon-area input {
+    width: 300px;
+    margin-right: -6px;
+}
+.coupon-area .tick-coupon {
+    padding: 8px 10px;
+    border-radius: 0;
+    line-height: 0;
+    background-color: #09183C;
+    border: none;
+}
+.tick-coupon img {
+    width: 12px;
+}
+.amount-area {
+    display: flex;
+    justify-content: end;
+}
+.amount-area li {
+    display: flex;
+    gap: 117px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.amount-area span {
+    font-size: 14px;
+    font-family: 'GillSansStd';
+    color: #7c7b7b;
+}
+.total-amount span {
+    color: #000000;
+    font-weight: 600;
+}
+.right-layout table {
+    margin: 10px 0px;
+}
+.checkout-bar {
+    margin-top: 15px;
+}
+.message-area label {
+    font-size: 14px;
+    color: #000;
+    font-family: 'GillSansStd';
+    margin: 0;
+    padding-top: 7px;   
+     padding-bottom: 15px;
+}
+.message-area .form-check {
+    padding-top: 13px;
+}
+.message-area .form-check label {
+    padding-top: 0;
+}
+.checkout-bar .btn-confirm{
+    width: 100%;
+    background-color: #09183c;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'GillSansStd';
+    letter-spacing: 1px;
+}
+.checkout-bar .btn-confirm:hover {
+    color: #fff;
+}
+.checkbox-checkout {
+    padding: 15px 0px 0px 0px;
+}
+.coupon-area div {
+    display: flex;
 }
 /* CHECKOUT PAGE END */
 
