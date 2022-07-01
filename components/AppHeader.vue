@@ -1,7 +1,7 @@
 <template>
-<div>
+  <div>
     <!-- NORMAL SCREEN START -->
-     <div class="container-fluid">
+    <div class="container-fluid">
       <div class="normal-header">
         <div class="header-middle">
           <div class="header-search">
@@ -66,7 +66,7 @@
                 </select>
               </li>
               <li>
-                <nuxt-link to="/">
+                <nuxt-link to="/" data-toggle="modal" data-target="#exampleModalCenter">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                     <path
@@ -74,6 +74,51 @@
                   </svg>
                   MY BAGS <span>(0)</span></nuxt-link>
               </li>
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">MY BAG</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="bag-modal">
+                        <div class="product-bag">
+                          <img src="~/assets/images/popup.jpg">
+                          <div class="product-detail-modal">
+                            <h2>2 PC His & Her Gift Set</h2>
+                            <p>Rs.6,000</p>
+                            <span> Style Number: MJGS06</span>
+                            <ul>
+                              <li>Color: red</li>
+                              <li>QTY: x1 | <nuxt-link to="/">Remove</nuxt-link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="modal-p-price">
+                        <ul>
+                          <li><strong>SUB-TOTAL</strong> RS.6,000</li>
+                          <li><strong>FREE SHIPPING</strong> RS.0</li>
+                          <li><strong>TOTAL </strong> RS.6,000</li>
+                        </ul>
+                        <div class="btn-checkout">
+                          <button type="button" class="btn btn-continue" data-dismiss="modal">Continue Shopping</button>
+                          <button type="button" class="btn btn-continue">Checkout</button>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
               <li>
                 <select class="form-select">
                   <option selected>My Account</option>
@@ -81,7 +126,7 @@
                   <option value="2">Login</option>
                 </select>
               </li>
-            
+
 
             </ul>
 
@@ -89,88 +134,152 @@
         </div>
         <div class="header-end">
           <div class="header-inner">
-          
-              <div class="row mb-0">
-                <div class="col-12">
-                  <nuxt-link to="/"><img src="~/assets/images/mjjlogo.svg"></nuxt-link>
-                  
-                </div>
-                <div class="col-12">
-                  <ul class="navbar">
-                    <li>
-                      <nuxt-link to="/" class="nav-main">Women</nuxt-link>
-                      
-                    </li>
-                    <div class="sub-menu">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-3">
-                              <ul class="dropdown">
-                                <li>
-                                  <h2> Bags</h2>
-                                  <nuxt-link to="/">Accessories </nuxt-link>
-                                  <nuxt-link to="/">Backpacks</nuxt-link>
-                                  <nuxt-link to="/">Evening Bags</nuxt-link>
-                                  <nuxt-link to="/">Top Handles & Totes</nuxt-link>
-                                  <nuxt-link to="/">Crossbody</nuxt-link>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="col-3">
-                              <ul class="dropdown">
-                                <li>
-                                  <h2> Small Leather Goods</h2>
-                                  <nuxt-link to="/">Small Wallets </nuxt-link>
-                                  <nuxt-link to="/">Continental Wallets</nuxt-link>
-                                  <nuxt-link to="/">Key Rings & Holders</nuxt-link>
-                                  <nuxt-link to="/">Card Cases</nuxt-link>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="col-3">
-                              <ul class="dropdown">
-                                <li>
-                                  <h2> Accessories</h2>
-                                  <nuxt-link to="/">Jewelry Cases </nuxt-link>
-                                  <nuxt-link to="/">Watch Cases</nuxt-link>
-                                  <nuxt-link to="/">Accessories Boxes</nuxt-link>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="col-3">
-                              <ul class="dropdown">
-                                <li>
-                                  <h2> New Arrival</h2>
-                                  <img src="~/assets/images/arrival.jpg">
 
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+            <div class="row mb-0">
+              <div class="col-12">
+                <nuxt-link to="/"><img src="~/assets/images/mjjlogo.svg"></nuxt-link>
+
+              </div>
+              <div class="col-12">
+                <ul class="navbar">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Women
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Handbags </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Document Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Wallets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Card Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
+
+                    </div>
+                  </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Men
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Document Cases </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Wallets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Card Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Travel
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Travel Bags / Trolleys </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Toiletry Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">  Passport holders</nuxt-link>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Office
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Portfolios / Folders</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Office Desk Accessories</nuxt-link>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Gifts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Gift Sets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Photo Frames</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Buy A Gift Voucher</nuxt-link>
+                    </div>
+                  </li> 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     The House of MJ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">History</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">YouTube Videos</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion shows</nuxt-link>
+                       <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
+                    </div>
+                  </li>
+
+                  <!-- <div class="sub-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Bags</h2>
+                              <nuxt-link to="/">Handbags </nuxt-link>
+                              <nuxt-link to="/">Document Cases</nuxt-link>
+                              <nuxt-link to="/"> Wallets</nuxt-link>
+                              <nuxt-link to="/">Card Cases</nuxt-link>
+                              <nuxt-link to="/"> Accessories</nuxt-link>
+                              <nuxt-link to="/">Travel</nuxt-link>
+                              <nuxt-link to="/">Fashion Show</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Small Leather Goods</h2>
+                              <nuxt-link to="/">Small Wallets </nuxt-link>
+                              <nuxt-link to="/">Continental Wallets</nuxt-link>
+                              <nuxt-link to="/">Key Rings & Holders</nuxt-link>
+                              <nuxt-link to="/">Card Cases</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Accessories</h2>
+                              <nuxt-link to="/">Jewelry Cases </nuxt-link>
+                              <nuxt-link to="/">Watch Cases</nuxt-link>
+                              <nuxt-link to="/">Accessories Boxes</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> New Arrival</h2>
+                              <img src="~/assets/images/arrival.jpg">
+
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                    
-                    <li>
-                      <nuxt-link to="/about" class="nav-main">Men</nuxt-link>
-                    </li>
-                    <li>
-                      <nuxt-link to="/" class="nav-main">office</nuxt-link>
-                    </li>
-                    <li>
-                      <nuxt-link to="/" class="nav-main">Travel & Tech</nuxt-link>
-                    </li>
-                    <li>
-                      <nuxt-link to="/" class="nav-main">Gifts</nuxt-link>
-                    </li>
-                  </ul>
-                </div>
+                    </div>
+                  </div> -->
+
+
+                </ul>
               </div>
-            
+            </div>
+
           </div>
         </div>
 
       </div>
-     </div>
+    </div>
 
     <!-- MOBILE HEADER START -->
     <div class="mobile-header">
@@ -284,7 +393,7 @@
                   </li>
 
 
-                  
+
 
                 </ul>
 
@@ -298,7 +407,7 @@
 
       </div>
     </div>
-</div>
+  </div>
 
 </template>
 
