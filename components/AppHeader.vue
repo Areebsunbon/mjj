@@ -57,14 +57,22 @@
           </div>
           <div class="right-menu">
             <ul>
-              <li>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected><strong>Rs</strong> Currency</option>
-                  <option value="1">Euro</option>
-                  <option value="2">Pakistan</option>
-                  <option value="3">Dollar</option>
-                </select>
-              </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <strong>Rs</strong> Currency
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul>
+                      <li><nuxt-link to="/"> Euror</nuxt-link>
+                    </li>
+                    <li>
+                    <nuxt-link to="/"> Pakistan</nuxt-link></li>
+                     <li>
+                    <nuxt-link to="/"> Dollar</nuxt-link></li>
+                    </ul>
+                    </div>
+                  </li>
               <li>
                 <nuxt-link to="/" data-toggle="modal" data-target="#exampleModalCenter">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -119,13 +127,22 @@
                   </div>
                 </div>
               </div>
-              <li>
-                <select class="form-select">
-                  <option selected>My Account</option>
-                  <option value="1">Register</option>
-                  <option value="2">Login</option>
-                </select>
-              </li>
+               <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      My Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul>
+                      <li><nuxt-link to="register"> Register</nuxt-link>
+                    </li>
+                    <li>
+                    <nuxt-link to="login"> Login</nuxt-link></li>
+                    </ul>
+                     
+
+                    </div>
+                  </li>
 
 
             </ul>
@@ -301,7 +318,7 @@
               <!-- Toggler -->
               <!-- Sidenav -->
               <nav id="sidenav-1" class="sidenav" data-mdb-hidden="false">
-                <ul class="sidenav-menu">
+                <!-- <ul class="sidenav-menu">
                   <li class="sidenav-item">
                     <a class="sidenav-link">
                       <i class="far fa-smile fa-fw me-3"></i><span>Link 1</span></a>
@@ -329,6 +346,137 @@
                       </li>
                     </ul>
                   </li>
+                </ul> -->
+                <ul class="sidenav-menu">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Women
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Handbags </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Document Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Wallets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Card Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
+
+                    </div>
+                  </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Men
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Document Cases </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Wallets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Card Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
+
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Travel
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Travel Bags / Trolleys </nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Toiletry Cases</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">  Passport holders</nuxt-link>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Office
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Portfolios / Folders</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Office Desk Accessories</nuxt-link>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Gifts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">Gift Sets</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Photo Frames</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Buy A Gift Voucher</nuxt-link>
+                    </div>
+                  </li> 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     The House of MJ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <nuxt-link to="/" class="dropdown-item">History</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">YouTube Videos</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Fashion shows</nuxt-link>
+                       <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
+                    </div>
+                  </li>
+
+                  <!-- <div class="sub-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Bags</h2>
+                              <nuxt-link to="/">Handbags </nuxt-link>
+                              <nuxt-link to="/">Document Cases</nuxt-link>
+                              <nuxt-link to="/"> Wallets</nuxt-link>
+                              <nuxt-link to="/">Card Cases</nuxt-link>
+                              <nuxt-link to="/"> Accessories</nuxt-link>
+                              <nuxt-link to="/">Travel</nuxt-link>
+                              <nuxt-link to="/">Fashion Show</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Small Leather Goods</h2>
+                              <nuxt-link to="/">Small Wallets </nuxt-link>
+                              <nuxt-link to="/">Continental Wallets</nuxt-link>
+                              <nuxt-link to="/">Key Rings & Holders</nuxt-link>
+                              <nuxt-link to="/">Card Cases</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> Accessories</h2>
+                              <nuxt-link to="/">Jewelry Cases </nuxt-link>
+                              <nuxt-link to="/">Watch Cases</nuxt-link>
+                              <nuxt-link to="/">Accessories Boxes</nuxt-link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-3">
+                          <ul class="dropdown">
+                            <li>
+                              <h2> New Arrival</h2>
+                              <img src="~/assets/images/arrival.jpg">
+
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+
                 </ul>
               </nav>
               <!-- Sidenav -->
@@ -376,35 +524,49 @@
             <div class="col-12">
               <div class="right-menu">
                 <ul>
-                  <li>
-                    <select class="form-select">
-                      <option selected>My Account</option>
-                      <option value="1">Register</option>
-                      <option value="2">Login</option>
-                    </select>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      My Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul>
+                      <li><nuxt-link to="register"> Register</nuxt-link>
+                    </li>
+                    <li>
+                    <nuxt-link to="login"> Login</nuxt-link></li>
+                    </ul>
+                    </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <select class="form-select" aria-label="Default select example">
                       <option selected><strong>Rs</strong> Currency</option>
                       <option value="1">Euro</option>
                       <option value="2">Pakistan</option>
                       <option value="3">Dollar</option>
                     </select>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <strong>Rs</strong> Currency
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul>
+                      <li><nuxt-link to="/"> Euror</nuxt-link>
+                    </li>
+                    <li>
+                    <nuxt-link to="/"> Pakistan</nuxt-link></li>
+                     <li>
+                    <nuxt-link to="/"> Dollar</nuxt-link></li>
+                    </ul>
+                    </div>
                   </li>
-
-
-
-
                 </ul>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   </div>

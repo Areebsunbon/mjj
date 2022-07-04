@@ -166,6 +166,7 @@
 }
 
 @media(max-width:767px) {
+
   .banner-full .carousel-caption h5 {
     font-size: 20px;
     letter-spacing: 7px;
@@ -224,6 +225,10 @@
     letter-spacing: 0px;
   }
 
+  .mobile-header .right-menu a {
+    line-height: initial;
+    padding: 6px;
+}
   .right-menu a {
     font-weight: 500;
   }
