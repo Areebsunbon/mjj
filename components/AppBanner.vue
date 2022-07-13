@@ -13,7 +13,7 @@
             <div class="carousel-caption">
               <h5>BE THE DIFFERENCE</h5>
               <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
-               <nuxt-link to="#">View Product</nuxt-link>
+               <nuxt-link to="product">View Product</nuxt-link>
             </div>
           </div>
           <div class="carousel-item">
@@ -21,7 +21,7 @@
             <div class="carousel-caption">
                 <h5>BEAUTIFY THE ELEGANE</h5>
                  <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
-              <nuxt-link to="#">View Product</nuxt-link>
+              <nuxt-link to="product">View Product</nuxt-link>
             </div>
           </div>
           <div class="carousel-item">
@@ -29,7 +29,7 @@
             <div class="carousel-caption">
                <h5>BEAUTIFY THE ELEGANE</h5>
                 <p>Some representative placeholder content for the first slide.Some representative placeholder content for the first slide.</p>
-              <nuxt-link to="#">View Product</nuxt-link>
+              <nuxt-link to="product">View Product</nuxt-link>
             </div>
           </div>
         </div>

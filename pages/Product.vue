@@ -18,6 +18,7 @@
                   <h2>BACKPACKS</h2>
                 </div>
                 <div class="col-4">
+                  <nuxt-link to="singleproduct">
                   <div class="product-card">
                     <img src="~/assets/images/bag1.jpg">
                     <div class="fav-icon">
@@ -35,6 +36,7 @@
                     <h2>SLIM BACKPACK</h2>
                     <span>RS.24,000</span>
                   </div>
+                  </nuxt-link>
 
 
 
@@ -169,7 +171,7 @@
   export default {
     components: {
       Breadcrumbs,
-      Sidebar,
+      Sidebar
 
 
     }

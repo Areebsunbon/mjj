@@ -100,7 +100,7 @@
       }
     },
     components: {
-      Breadcrumbs,
+      Breadcrumbs
     },
 
 

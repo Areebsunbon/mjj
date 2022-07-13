@@ -1,12 +1,6 @@
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    script: [
-      
-    
-    ],
-    script: [
-      
+  head:{
+    script: [ 
       { 
         src: "https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js",
       },
@@ -15,15 +9,14 @@ export default {
       },
       {
         src: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js",
-      }
+      },
     ],
     link: [
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css',
-      }
+      },
     ],
-    
     title: 'mjj',
     htmlAttrs: {
       lang: 'en'
@@ -43,13 +36,13 @@ export default {
       {
         name: 'format-detection',
         content: 'telephone=no'
-      }
+      },
     ],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    }]
+    }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

@@ -26,20 +26,14 @@
                     <img src="~/assets/images/fab4.png">
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
-
     </section>
-
      <section class="shop-section">
       <div class="container">
-     
           <div class="row">
             <div class="col-md-6 p-0">
               <div class="box-shop1 m-same img-hover-zoom"> 
@@ -54,21 +48,14 @@
               </div>
             </div>
           </div>
-
-        
       </div>
-
-
     </section>
     <section class="instagram-section">
       <div class="container">
         <div class="main-insta">
-          <h2>connect with us</h2>
+          <h2>connect with us</h2>  
           <img src="~/assets/images/instgram.png" class="insta-img">
-
-
         </div>
-
       </div>
     </section>
   </div>
@@ -88,7 +75,7 @@
             content: 'This is an app'
           }]
         }
-      }
+      },
     }
 
   }

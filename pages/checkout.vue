@@ -28,7 +28,7 @@
                     <div class="form-group row">
                       <label class="col-lg-3 col-form-label">ADDRESS</label>
                       <div class="col-lg-9 col-form-input">
-                        <textarea class="form-control" rows="3" placeholder="ADDRESS"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Address"></textarea>
                       </div>
                     </div>
                     <div class="checkout-location">
@@ -104,7 +104,7 @@
                     <div class="form-group row">
                       <label class="col-lg-3 col-form-label">ADDRESS</label>
                       <div class="col-lg-9 col-form-input">
-                        <textarea class="form-control" rows="3" placeholder="ADDRESS"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Address"></textarea>
                       </div>
                     </div>
                      <div class="checkout-location">

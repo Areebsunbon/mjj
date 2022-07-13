@@ -1,7 +1,7 @@
 <template>
   <div>
     <Breadcrumbs />
-    <section class="login-page">
+    <section class="login-page form-input">
       <div class="container">
         <div class="row">
           <div class="col-md-6">

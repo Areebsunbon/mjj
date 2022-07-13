@@ -497,6 +497,9 @@ nav#sidenav-1 {
     transform: none !important;
     bottom: 0;
 }
+.dropdown.show a:before{
+    display: none !important;
+}
 /* banner start */
 .banner-full {
  position: relative;    
@@ -742,6 +745,7 @@ img.insta-img {
     font-size: 1vw;
     letter-spacing: 0.1vw;
     margin-top: 1vh;
+    color: #000;
     display: block;
 }
 .product-color img {
