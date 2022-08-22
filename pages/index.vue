@@ -5,7 +5,7 @@
       <!-- <Nuxt /> -->
     </section>
 
-    <section v-if="this.collections > 0" class="about-section">
+    <section v-if="this.collections" class="about-section">
       <div class="container">
         <div class="main-box">
           <h2>FABULOUS Gifts</h2>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </section>
-    <section v-if="this.promotions > 0" class="shop-section">
+    <section v-if="this.promotions" class="shop-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 p-0">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </section>
-    <section v-if="this.instagram > 0" class="instagram-section">
+    <section v-if="this.instagram" class="instagram-section">
       <div class="container">
         <div class="main-insta">
           <h2>connect with us</h2>
