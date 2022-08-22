@@ -1736,3 +1736,76 @@ img.insta-img {
     border-color: #ffffff;
     box-shadow: none;
 }
+/* Mubashir Khan Swatch CSS */
+
+.singleSwatch {
+    width: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.combination-swatch {
+  position: absolute;
+  inset: 0;
+  width: 40px;
+  height: 60px;
+  transform: rotate(45deg) translate(-27px, -8px);
+}
+
+.color-swatch.s-20 {
+  width: 20px;
+  height: 20px;
+}
+
+.color-swatch.s-20 .combination-swatch {
+  width: 20px;
+  height: 30px;
+  transform: rotate(45deg) translate(-13px, -4px);
+}
+
+.combination-swatch.swatch3 {
+  transform: rotate(45deg) translate(-27px, 23px);
+  z-index: 1;
+}
+
+.combination-swatch.swatch4 {
+  transform: rotate(45deg) translate(13px, -37px);
+}
+
+.combination-swatch.swatch5 {
+  transform: rotate(0deg) translate(-20px, -40px);
+}
+
+table#Color_option .combination-swatch.swatch3 {
+  transform: rotate(45deg) translate(-33px, 23px);
+}
+
+table#Color_option .combination-swatch.swatch4 {
+  transform: rotate(45deg) translate(6px, -37px);
+}
+
+table#Color_option .combination-swatch.swatch5 {
+  transform: rotate(0deg) translate(-24.5px, -44px);
+}
+
+.s-20 .combination-swatch.swatch3 {
+  transform: rotate(45deg) translate(-13px, 11px);
+}
+
+.s-20 .combination-swatch.swatch4 {
+  transform: rotate(45deg) translate(7px, -19px);
+}
+
+.s-20 .combination-swatch.swatch5 {
+  transform: rotate(0deg) translate(-9px, -20px);
+}
+
+/* End */
