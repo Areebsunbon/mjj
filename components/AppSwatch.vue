@@ -18,8 +18,8 @@
       class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-      <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
-      </div>
+        <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
+        </div>
     </div>
 
     <!-- Swatch 4 -->
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Swatch 5 -->
-    <div v-if="variation.color_options.hex_value.length == 4" v-on:mouseover="changeFeature(variation)"
+    <div v-if="variation.color_options.hex_value.length == 5" v-on:mouseover="changeFeature(variation)"
       class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>

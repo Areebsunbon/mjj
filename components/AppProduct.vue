@@ -1,7 +1,12 @@
 <template>
 
   <div class="product-card">
-    <img :src="featureImage">
+    <nuxt-link :to="'singleproduct?productId='+product.id">
+
+      <img :src="featureImage">
+
+    </nuxt-link>
+
     <div class="fav-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
