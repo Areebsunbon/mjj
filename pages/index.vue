@@ -32,7 +32,7 @@
         </div>
       </div>
     </section>
-    <section v-if="this.promotions" class="shop-section">
+    <section v-if="this.promotions.length > 0" class="shop-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 p-0">
@@ -96,7 +96,7 @@ export default {
   },
   data() {
     return {
-      categories: {},
+      // categories: {},
       banners: {},
       collections: {},
       promotions: {},
@@ -137,29 +137,32 @@ export default {
       // Main Api of Home
       axios.get(this.baseURL + 'api/main')
         .then((response) => {
-          console.log('hala', response.data.data);
-          this.categories = response.data.data.category
-          this.banners = response.data.data.banners
-          this.collections = response.data.data.collections
-          this.promotions = response.data.data.promotions
-          this.instagram_access_token = response.data.data.instagram[0].access_token ?? ''
+          // console.log('hala', response.data.data.collections);
+          // this.categories = response.data.data.category
+          let data = response.data.data
+          this.banners = data.banners
+          this.collections = data.collections
+          this.promotions = data.promotions
 
           //Declaring Collections
-          this.collectionImage1 = this.baseURL + 'storage/' + this.collections[0].image
-          this.collectionImage2 = this.baseURL + 'storage/' + this.collections[1].image
-          this.collectionImage3 = this.baseURL + 'storage/' + this.collections[2].image
-          this.collectionImage4 = this.baseURL + 'storage/' + this.collections[3].image
+          this.collectionImage1 = this.baseURL + 'storage/' + data.collections[0].image
+          this.collectionImage2 = this.baseURL + 'storage/' + data.collections[1].image
+          this.collectionImage3 = this.baseURL + 'storage/' + data.collections[2].image
+          this.collectionImage4 = this.baseURL + 'storage/' + data.collections[3].image
 
           // Declaring Promotions
-          this.promotionImage1 = this.baseURL + 'storage/' + this.promotions[0].image
-          this.promotionTitle1 = this.promotions[0].title
+          this.promotionImage1 = this.baseURL + 'storage/' + data.promotions[0].image
+          this.promotionTitle1 = data.promotions[0].title
+          console.log('hala', this.collections);
 
-          this.promotionImage2 = this.baseURL + 'storage/' + this.promotions[1].image
-          this.promotionTitle2 = this.promotions[1].title
+          this.promotionImage2 = this.baseURL + 'storage/' + data.promotions[1].image
+          this.promotionTitle2 = data.promotions[1].title
+
         }).then(() => { //Instagram basic display api request
 
           axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,username,timestamp,permalink&access_token=' + this.instagram_access_token)
             .then((response) => { //Assigning instagram response
+              this.instagram_access_token = response.data.data.instagram[0].access_token ?? ''
               this.instagram = response.data.data
               this.instagramPost1 = this.instagram[0]
               this.instagramPost2 = this.instagram[1]
