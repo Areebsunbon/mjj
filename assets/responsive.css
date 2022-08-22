@@ -5,7 +5,7 @@
     align-items: center;
 }
 }
-  
+
   @media(max-width:1024px) {
 
   /* Header start */
@@ -41,9 +41,9 @@
     padding: 40px 0px 0px 0px;
 }
 
-  .instagram-section {
+  /* .instagram-section {
     display: none;
-  }
+  } */
 
   .sidebar-bar {
     display: block;
@@ -247,9 +247,12 @@
     font-size: 23px;
   }
 
-  .instagram-section {
+  /* .instagram-section {
     display: none;
-  }
+  } */
+  .inst-img {
+    flex-direction: column;
+}
 
   .box-shop2 {
     margin-top: 20px;
