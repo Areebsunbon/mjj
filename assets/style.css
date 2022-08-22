@@ -88,6 +88,7 @@ a:hover{
     background-color: transparent;
     padding: 0;
     margin: 0;
+    box-shadow: none;
 }
 .right-menu select.form-select {
     font-family: 'Lato-Regular';
@@ -657,7 +658,11 @@ nav#sidenav-1 {
 img.insta-img {
     width: 100%;
 }
-
+.inst-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /* BREADCURMBS START */
 .breadcrumbs-bar ul {
@@ -1723,4 +1728,10 @@ img.insta-img {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+.search-form button.btn.btn-primary:active, 
+.search-form button.btn.btn-primary:focus {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: none;
 }
