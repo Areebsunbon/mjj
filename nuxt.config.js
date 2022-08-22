@@ -84,8 +84,8 @@ export default {
 
   axios: {
     // Base url
-    // baseURL : "http://3.135.102.9:9117/", //QA
-    baseURL : "http://127.0.0.1:8000/",  // local
+    baseURL : "http://3.135.102.9:9117/", //QA
+    // baseURL : "http://127.0.0.1:8000/",  // local
 
   }
 }
