@@ -26,7 +26,6 @@
               </td>
               <td>
                 <p>7374</p>
-
               </td>
               <td>
                 <p>In Stock</p>
@@ -54,8 +53,6 @@
                
               </td>
             </tr>
-
-
           </tbody>
         </table>
       </div>

@@ -56,6 +56,7 @@
           <h2>connect with us</h2>
           <img src="~/assets/images/instgram.png" class="insta-img">
         </div>
+        <div class="inst-img">
         <div class="main-insta">
           <a :href=this.instagramPost1.permalink target="_blank">
             <img :src="this.instagramPost1.media_url" style="width:20%;">
@@ -79,6 +80,7 @@
             <img :src="this.instagramPost4.media_url" style="width:20%;">
           </a>
           <!-- <h2>{{ instagramPost4.id }}</h2> -->
+        </div>
         </div>
       </div>
     </section>
@@ -175,3 +177,4 @@ export default {
   }
 }
 </script>
+
