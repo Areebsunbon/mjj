@@ -1,6 +1,6 @@
 
 p{
-    
+
     font-family: "GillSansStd";
 }
 h1,
@@ -313,10 +313,10 @@ ul.navbar {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-   
+
 }
 .sub-menu a:hover:before {
-   
+
     left: 0;
     right: 0;
     bottom: -1px;
@@ -371,7 +371,7 @@ ul.navbar {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-   
+
 }
 .navbar li:hover a:before {
     left: 20px;
@@ -407,7 +407,7 @@ nav#sidenav-1 {
     transition: 0.5s;
     width: 80%;
     height: 100%;
-     display: none; 
+     display: none;
 }
 .right-menu .dropdown-menu.show ul {
     display: block;
@@ -503,7 +503,7 @@ nav#sidenav-1 {
 }
 /* banner start */
 .banner-full {
- position: relative;    
+ position: relative;
 }
 .banner-full img {
     width: 100%;
@@ -630,7 +630,7 @@ nav#sidenav-1 {
 }
 .img-hover-zoom {
 
-    overflow: hidden; 
+    overflow: hidden;
   }
   .img-hover-zoom img {
     transition: transform 1.8s ease;
@@ -654,6 +654,7 @@ nav#sidenav-1 {
 }
 .main-insta img {
     padding: 30px 0px 0px 0px;
+    width: 100%;
 }
 img.insta-img {
     width: 100%;
@@ -1157,7 +1158,7 @@ img.insta-img {
 }
 .locator-box:hover {
     background-color: #08163c;
-    
+
 }
 .locator-menu h3 {
     font-family: 'Lato-Regular';
@@ -1610,7 +1611,7 @@ img.insta-img {
     color: #000;
     font-family: 'GillSansStd';
     margin: 0;
-    padding-top: 7px;   
+    padding-top: 7px;
      padding-bottom: 15px;
 }
 .message-area .form-check {
@@ -1682,7 +1683,7 @@ img.insta-img {
     fill: #FFFFFF;
     margin-left: 3px;
 }
-    
+
 .footer-link h2 {
     margin: 0;
     font-size: 12px;
@@ -1729,7 +1730,7 @@ img.insta-img {
     text-transform: uppercase;
     color: #FFFFFF;
 }
-.search-form button.btn.btn-primary:active, 
+.search-form button.btn.btn-primary:active,
 .search-form button.btn.btn-primary:focus {
     background-color: #ffffff;
     border-color: #ffffff;

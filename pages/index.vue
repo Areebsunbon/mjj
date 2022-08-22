@@ -58,25 +58,25 @@
         <div class="inst-img">
           <div class="main-insta">
             <a :href=this.instagramPost1.permalink target="_blank">
-              <img :src="this.instagramPost1.media_url" style="width:20%;">
+              <img :src="this.instagramPost1.media_url">
             </a>
             <!-- <h2>{{ instagramPost1.id }}</h2> -->
           </div>
           <div class="main-insta">
             <a :href=this.instagramPost2.permalink target="_blank">
-              <img :src="this.instagramPost2.media_url" style="width:20%;">
+              <img :src="this.instagramPost2.media_url">
             </a>
             <!-- <h2>{{ instagramPost2.id }}</h2> -->
           </div>
           <div class="main-insta">
             <a :href=this.instagramPost3.permalink target="_blank">
-              <img :src="this.instagramPost3.media_url" style="width:20%;">
+              <img :src="this.instagramPost3.media_url">
             </a>
             <!-- <h2>{{ instagramPost3.id }}</h2> -->
           </div>
           <div class="main-insta">
             <a :href=this.instagramPost4.permalink target="_blank">
-              <img :src="this.instagramPost4.media_url" style="width:20%;">
+              <img :src="this.instagramPost4.media_url">
             </a>
             <!-- <h2>{{ instagramPost4.id }}</h2> -->
           </div>
@@ -138,13 +138,13 @@ export default {
       // Main Api of Home
       axios.get(this.baseURL + 'api/main')
         .then((response) => {
-          // console.log('hala', response.data.data.collections);
+          console.log('hala', response.data.data);
           // this.categories = response.data.data.category
           let data = response.data.data
           this.banners = data.banners
           this.collections = data.collections
           this.promotions = data.promotions
-          this.instagram_access_token = response.data.data.instagram[0].access_token ?? '' //IG access token from DB
+          this.instagram_access_token = data.hasOwnProperty("instagram") ? data.instagram[0].access_token : '' //IG access token from DB
 
 
           //Declaring Collections
@@ -162,14 +162,17 @@ export default {
 
         }).then(() => { //Instagram basic display api request
 
-          axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,username,timestamp,permalink&access_token=' + this.instagram_access_token)
-            .then((response) => { //Assigning instagram response
-              this.instagram = response.data.data
-              this.instagramPost1 = this.instagram[0]
-              this.instagramPost2 = this.instagram[1]
-              this.instagramPost3 = this.instagram[2]
-              this.instagramPost4 = this.instagram[3]
-            }).catch(() => 'Something is wrong with the Instagram Access token') //in case token gets expired
+          if (this.instagram_access_token) {
+            axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,username,timestamp,permalink&access_token=' + this.instagram_access_token)
+              .then((response) => { //Assigning instagram response
+                this.instagram = response.data.data
+                this.instagramPost1 = this.instagram[0]
+                this.instagramPost2 = this.instagram[1]
+                this.instagramPost3 = this.instagram[2]
+                this.instagramPost4 = this.instagram[3]
+              }).catch(() => 'Something is wrong with the Instagram Access token') //in case token gets expired
+          }
+
 
         }).catch(() => 'Data not available') //in case admin has not uploaded images
     }
