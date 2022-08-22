@@ -196,7 +196,7 @@ export default {
       this.slug = url.searchParams.get("slug");
     },
     getProducts() {
-      axios.get(this.baseURL + 'api/childCategory?slug=' + this.slug) //subCategory End point
+      axios.get(this.baseURL + 'api/productsList?slug=' + this.slug) //subCategory End point
         .then((response) => {
           console.log('hala', response.data.data);
           this.products = response.data.data;
