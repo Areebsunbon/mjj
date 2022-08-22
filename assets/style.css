@@ -769,6 +769,9 @@ img.insta-img {
     height: 12px;
     fill: #fff;
 }
+.favfill svg{
+  fill: #09183D;
+}
 .fav-icon {
     position: absolute;
     top: 10px;
