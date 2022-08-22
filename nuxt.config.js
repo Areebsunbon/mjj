@@ -1,7 +1,7 @@
 export default {
   head:{
-    script: [ 
-      { 
+    script: [
+      {
         src: "https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js",
       },
       {
@@ -46,7 +46,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  
+
   css: [
     '~/assets/style.css',
     '~/assets/responsive.css',
@@ -57,7 +57,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/bootstrap.js', 
+    '~plugins/bootstrap.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -80,5 +80,12 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  axios: {
+    // Base url
+    baseURL : "http://3.135.102.9:9117/", //QA
+    // baseURL : "http://127.0.0.1:8000/",  // local
+
+  }
 }
