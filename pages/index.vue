@@ -54,33 +54,32 @@
       <div class="container">
         <div class="main-insta">
           <h2>connect with us</h2>
-          <img src="~/assets/images/instgram.png" class="insta-img">
         </div>
         <div class="inst-img">
-        <div class="main-insta">
-          <a :href=this.instagramPost1.permalink target="_blank">
-            <img :src="this.instagramPost1.media_url" style="width:20%;">
-          </a>
-          <!-- <h2>{{ instagramPost1.id }}</h2> -->
-        </div>
-        <div class="main-insta">
-          <a :href=this.instagramPost2.permalink target="_blank">
-            <img :src="this.instagramPost2.media_url" style="width:20%;">
-          </a>
-          <!-- <h2>{{ instagramPost2.id }}</h2> -->
-        </div>
-        <div class="main-insta">
-          <a :href=this.instagramPost3.permalink target="_blank">
-            <img :src="this.instagramPost3.media_url" style="width:20%;">
-          </a>
-          <!-- <h2>{{ instagramPost3.id }}</h2> -->
-        </div>
-        <div class="main-insta">
-          <a :href=this.instagramPost4.permalink target="_blank">
-            <img :src="this.instagramPost4.media_url" style="width:20%;">
-          </a>
-          <!-- <h2>{{ instagramPost4.id }}</h2> -->
-        </div>
+          <div class="main-insta">
+            <a :href=this.instagramPost1.permalink target="_blank">
+              <img :src="this.instagramPost1.media_url" style="width:20%;">
+            </a>
+            <!-- <h2>{{ instagramPost1.id }}</h2> -->
+          </div>
+          <div class="main-insta">
+            <a :href=this.instagramPost2.permalink target="_blank">
+              <img :src="this.instagramPost2.media_url" style="width:20%;">
+            </a>
+            <!-- <h2>{{ instagramPost2.id }}</h2> -->
+          </div>
+          <div class="main-insta">
+            <a :href=this.instagramPost3.permalink target="_blank">
+              <img :src="this.instagramPost3.media_url" style="width:20%;">
+            </a>
+            <!-- <h2>{{ instagramPost3.id }}</h2> -->
+          </div>
+          <div class="main-insta">
+            <a :href=this.instagramPost4.permalink target="_blank">
+              <img :src="this.instagramPost4.media_url" style="width:20%;">
+            </a>
+            <!-- <h2>{{ instagramPost4.id }}</h2> -->
+          </div>
         </div>
       </div>
     </section>
@@ -145,6 +144,8 @@ export default {
           this.banners = data.banners
           this.collections = data.collections
           this.promotions = data.promotions
+          this.instagram_access_token = response.data.data.instagram[0].access_token ?? '' //IG access token from DB
+
 
           //Declaring Collections
           this.collectionImage1 = this.baseURL + 'storage/' + data.collections[0].image
@@ -155,7 +156,6 @@ export default {
           // Declaring Promotions
           this.promotionImage1 = this.baseURL + 'storage/' + data.promotions[0].image
           this.promotionTitle1 = data.promotions[0].title
-          console.log('hala', this.collections);
 
           this.promotionImage2 = this.baseURL + 'storage/' + data.promotions[1].image
           this.promotionTitle2 = data.promotions[1].title
@@ -164,7 +164,6 @@ export default {
 
           axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,username,timestamp,permalink&access_token=' + this.instagram_access_token)
             .then((response) => { //Assigning instagram response
-              this.instagram_access_token = response.data.data.instagram[0].access_token ?? ''
               this.instagram = response.data.data
               this.instagramPost1 = this.instagram[0]
               this.instagramPost2 = this.instagram[1]
