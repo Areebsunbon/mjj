@@ -11,45 +11,7 @@
     </div>
     <ul v-for="(variation, index) in product.product_variation" class="product-color" :key="index">
 
-      <!-- Swatch 1 -->
-      <div v-if="variation.color_options.hex_value.length == 1" v-on:mouseover="changeFeature(variation, index)"
-        class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-
-      <!-- Swatch 2 -->
-      <div v-if="variation.color_options.hex_value.length == 2" v-on:mouseover="changeFeature(variation, index)"
-        class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }">
-        <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-      </div>
-
-      <!-- Swatch 3 -->
-      <div v-if="variation.color_options.hex_value.length == 3" v-on:mouseover="changeFeature(variation, index)"
-        class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }">
-        <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-        <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
-        </div>
-      </div>
-
-      <!-- Swatch 4 -->
-      <div v-if="variation.color_options.hex_value.length == 4" v-on:mouseover="changeFeature(variation, index)"
-        class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }">
-        <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-        <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
-        </div>
-        <div class="combination-swatch swatch4" :style="{ 'background-color': variation.color_options.hex_value[3] }">>
-        </div>
-      </div>
-
-      <!-- Swatch 5 -->
-      <div v-if="variation.color_options.hex_value.length == 4" v-on:mouseover="changeFeature(variation, index)"
-        class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }">
-        <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
-        <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
-        </div>
-        <div class="combination-swatch swatch4" :style="{ 'background-color': variation.color_options.hex_value[3] }">>
-        </div>
-        <div class="combination-swatch swatch5" :style="{ 'background-color': variation.color_options.hex_value[4] }">>
-        </div>
-      </div>
+      <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
 
     </ul>
     <h2>{{ product.name }}</h2>
@@ -60,8 +22,12 @@
 </template>
 
 <script>
+import Swatch from '@/components/AppSwatch'
 export default {
   name: 'ProductComponenet',
+  components: {
+    Swatch
+  },
   props: [
     'product'
   ],
@@ -71,7 +37,7 @@ export default {
     }
   },
   methods: {
-    changeFeature(variation, index) {
+    changeFeatureImage(variation) {
       this.featureImage = variation.product_images[0].product_image
     },
   }

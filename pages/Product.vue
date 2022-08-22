@@ -71,7 +71,6 @@ export default {
     getProducts() {
       axios.get(this.baseURL + 'api/productsList?slug=' + this.slug) //subCategory End point
         .then((response) => {
-          console.log('hala', response.data.data);
           this.products = response.data.data;
           // this.featureImage = this.products.data[0].productimages.Feature[0].product_image
 
