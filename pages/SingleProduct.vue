@@ -17,12 +17,12 @@
               </div>
               <p>COLOR</p>
               <ul class="product-color">
-      <li v-for="(variation, index) in product.product_variation" :key="index">
+                <li v-for="(variation, index) in product.product_variation" :key="index">
 
-        <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
+                  <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
 
-      </li>
-    </ul>
+                </li>
+              </ul>
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
               <form class="sp-addbag">
                 <h4>QUANTITY</h4>
@@ -119,9 +119,9 @@ export default {
           this.product = response.data.data;
         }).catch(() => 'Products not available') //in case no product Available
     },
-    changeFeatureImage(variation){
+    changeFeatureImage(variation) {
       // alert('hala')
-      console.log('hala',variation);
+      console.log('hala', variation);
     }
 
   }
