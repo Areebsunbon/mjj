@@ -117,6 +117,7 @@ export default {
         .then((response) => {
           // console.log('hala',response);
           this.product = response.data.data;
+          this.productPrice =this.product.product_variation[0].price;
         }).catch(() => 'Products not available') //in case no product Available
     },
     changeFeatureImage(variation) {
