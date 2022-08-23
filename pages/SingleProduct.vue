@@ -10,7 +10,7 @@
           <div class="col-md-4">
             <div class="sp-main">
               <h2 class="sp-title">{{ this.product.name }}</h2>
-              <h4 class="sp-price">{{ this.product.formated_price }}</h4>
+              <h4 class="sp-price">{{ this.productPrice }}</h4>
               <span class="sp-number">STYLE NUMBER: {{ this.product.model_no }}</span>
               <p>DETAILS</p>
               <div class="sp-list" v-html="this.product.description">
@@ -19,14 +19,15 @@
               <ul class="product-color">
                 <li v-for="(variation, index) in product.product_variation" :key="index">
 
-                  <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
+                  <Swatch :variation="variation" :variationId="index"
+                    v-on:changeFeatureImageOnClick="changeFeatureImageOnClick" />
 
                 </li>
               </ul>
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
               <form class="sp-addbag">
                 <h4>QUANTITY</h4>
-                <input type="number">
+                <input type="number" min="1">
                 <button type="submit" class="continue-btn">ADD TO BAG</button>
                 <button id="fav-sp" class="continue-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -41,18 +42,15 @@
             <div class="sp-slider">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"><img
-                      src="~/assets/images/product1.jpg" class="d-block w-100"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"><img src="~/assets/images/product2.jpg"
-                      class="d-block w-100"></li>
-
+                  <li v-for="(productImage, index) in this.productImages" data-target="#carouselExampleIndicators"
+                    :class="{ 'active': index == 0 }" :data-slide-to=index :key="index">
+                    <img @click="changeDisplayImage(index, variationId)" :src="productImage.product_image"
+                      class="d-block w-100">
+                  </li>
                 </ol>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="~/assets/images/product1.jpg" class="d-block w-100">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="~/assets/images/product2.jpg" class="d-block w-100">
+                  <div v-for="(productImage, index) in this.productImages" class="carousel-item"  :class="{ 'active': index == 0 }" :key="index">
+                    <img @click="changeDisplayImage(index, variationId)" :src="productImage.product_image" class="d-block w-100">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
@@ -96,6 +94,9 @@ export default {
       productId: '',
       product: '',
       productPrice: '',
+      productImages: {},
+      selectedImage: '',
+      variationId: '',
       baseURL: this.$axios.defaults.baseURL, // Base Url
     }
   },
@@ -117,12 +118,23 @@ export default {
         .then((response) => {
           // console.log('hala',response);
           this.product = response.data.data;
-          this.productPrice =this.product.product_variation[0].price;
+          this.productPrice = this.product.product_variation[0].formated_price;
+          this.productImages = this.product.product_variation[0].product_images;
+          this.selectedImage = this.product.product_variation[0].product_images[0].product_image;
+          this.variationId = 0;
         }).catch(() => 'Products not available') //in case no product Available
     },
-    changeFeatureImage(variation) {
-      // alert('hala')
-      console.log('hala', variation);
+    changeDisplayImage(imageIndex, variationId) {
+      this.selectedImage = this.product.product_variation[this.variationId].product_images[imageIndex].product_image;
+
+    },
+    changeFeatureImageOnClick(payload) {
+      // console.log('hala', payload.variation_id);
+      this.variationId = payload.variation_id;
+      this.productPrice = this.product.product_variation[this.variationId].formated_price;
+      this.productImages = this.product.product_variation[this.variationId].product_images;
+      this.selectedImage = this.product.product_variation[this.variationId].product_images[0].product_image;
+
     }
 
   }

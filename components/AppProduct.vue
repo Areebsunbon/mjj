@@ -17,7 +17,7 @@
     <ul class="product-color">
       <li v-for="(variation, index) in product.product_variation" :key="index">
 
-        <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
+        <Swatch :variation="variation" :variationId="index" v-on:changeFeatureImage="changeFeatureImage" />
 
       </li>
     </ul>
@@ -40,12 +40,13 @@ export default {
   ],
   data() {
     return {
-      featureImage: this.product.productimages.Feature[0].product_image
+      featureImage: this.product.productimages.Feature[0].product_image,
+      variationId: ''
     }
   },
   methods: {
-    changeFeatureImage(variation) {
-      this.featureImage = variation.product_images[0].product_image
+    changeFeatureImage(payload) {
+      this.featureImage = payload.variation.product_images[0].product_image
     },
   }
 }
