@@ -9,26 +9,20 @@
         <div class="row">
           <div class="col-md-4">
             <div class="sp-main">
-              <h2 class="sp-title">CLASSIC CONTINENTAL WALLET</h2>
-              <h4 class="sp-price">RS.4,350</h4>
-              <span class="sp-number">STYLE NUMBER: 7332</span>
+              <h2 class="sp-title">{{ this.product.name }}</h2>
+              <h4 class="sp-price">{{ this.product.formated_price }}</h4>
+              <span class="sp-number">STYLE NUMBER: {{ this.product.model_no }}</span>
               <p>DETAILS</p>
-              <ul class="sp-list">
-                <li>Fold over with button closure</li>
-                <li>Two cash compartments</li>
-                <li>One interior zip pocket</li>
-                <li>Four card slots</li>
-                <li>Exterior back Zipped pocket</li>
-                <li>Cow Nappa Leather</li>
-                <li>195 L x 95 H (mm)</li>
-                <li>7.6 L x 3.7 H (Inches)</li>
-              </ul>
+              <div class="sp-list" v-html="this.product.description">
+              </div>
               <p>COLOR</p>
               <ul class="product-color">
-                <li><img src="~/assets/images/color.png"></li>
-                <li><img src="~/assets/images/color.png"></li>
-                <li><img src="~/assets/images/color.png"></li>
-              </ul>
+      <li v-for="(variation, index) in product.product_variation" :key="index">
+
+        <Swatch :variation="variation" v-on:changeFeatureImage="changeFeatureImage(variation)" />
+
+      </li>
+    </ul>
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
               <form class="sp-addbag">
                 <h4>QUANTITY</h4>
@@ -76,7 +70,7 @@
                       viewBox="0 0 320 512">
                       <path
                         d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                      </svg></span>
+                    </svg></span>
                   <span class="sr-only">Next</span>
                 </button>
               </div>
@@ -89,21 +83,50 @@
 </template>
 
 <script>
-  import Breadcrumbs from '@/components/Breadcrumbs'
-  export default {
+import axios from 'axios';
+import Swatch from '@/components/AppSwatch'
+import Breadcrumbs from '@/components/Breadcrumbs'
+export default {
+  components: {
+    Breadcrumbs,
+    Swatch,
+  },
+  data() {
+    return {
+      productId: '',
+      product: '',
+      productPrice: '',
+      baseURL: this.$axios.defaults.baseURL, // Base Url
+    }
+  },
+  mounted() {
 
-    head() {
-      return {
-        script: [{
-          src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js'
-        }],
-      }
-    },
-    components: {
-      Breadcrumbs
-    },
+    this.getProductId();  // Get product id from URL
 
+    this.getProduct(this.productId);  // Get Product function hits axios for Product details  api
+
+  },
+  methods: {
+    getProductId() {
+      let url = new URL(location.href)
+      this.productId = url.searchParams.get("productId");
+      // console.log('hala', this.productId);
+    },
+    getProduct(productId) {
+      axios.get(this.baseURL + 'api/singleProduct?productId=' + productId) //Single Product End point
+        .then((response) => {
+          // console.log('hala',response);
+          this.product = response.data.data;
+        }).catch(() => 'Products not available') //in case no product Available
+    },
+    changeFeatureImage(variation){
+      // alert('hala')
+      console.log('hala',variation);
+    }
 
   }
+
+
+}
 
 </script>
