@@ -3,19 +3,19 @@
   <!-- Swatch 1 -->
   <div>
     <div v-if="variation.color_options.hex_value.length == 1" v-on:mouseover="changeFeature(variation)"
-      class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[0] }"
+      class="color-swatch m-auto s-20" :style="{ 'background-color': variation.color_options.hex_value[0] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value"></div>
 
     <!-- Swatch 2 -->
     <div v-if="variation.color_options.hex_value.length == 2" v-on:mouseover="changeFeature(variation)"
-      class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
+      class="color-swatch m-auto s-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
     </div>
 
     <!-- Swatch 3 -->
     <div v-if="variation.color_options.hex_value.length == 3" v-on:mouseover="changeFeature(variation)"
-      class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
+      class="color-swatch m-auto s-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
         <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
@@ -24,7 +24,7 @@
 
     <!-- Swatch 4 -->
     <div v-if="variation.color_options.hex_value.length == 4" v-on:mouseover="changeFeature(variation)"
-      class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
+      class="color-swatch m-auto s-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
       <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
@@ -35,7 +35,7 @@
 
     <!-- Swatch 5 -->
     <div v-if="variation.color_options.hex_value.length == 5" v-on:mouseover="changeFeature(variation)"
-      class="color-swatch m-auto S-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
+      class="color-swatch m-auto s-20" :style="{ 'background-color': variation.color_options.hex_value[1] }"
       data-toggle="tooltip" data-placement="top" :title="variation.color_options.option_value">
       <div class="combination-swatch " :style="{ 'background-color': variation.color_options.hex_value[0] }"></div>
       <div class="combination-swatch swatch3" :style="{ 'background-color': variation.color_options.hex_value[2] }">
