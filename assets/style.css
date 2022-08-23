@@ -1367,7 +1367,7 @@ img.insta-img {
 }
 .sp-slider .carousel-item img {
     height: auto;
-    object-fit: initial;
+    object-fit: cover;
     max-height: 474px;
     width: 600px;
     margin: 0 auto;
