@@ -18,10 +18,8 @@
               <p>COLOR</p>
               <ul class="product-color">
                 <li v-for="(variation, index) in product.product_variation" :key="index">
-
                   <Swatch :variation="variation" :variationId="index"
                     v-on:changeFeatureImageOnClick="changeFeatureImageOnClick" />
-
                 </li>
               </ul>
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
@@ -42,18 +40,18 @@
             <div class="sp-slider">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                  <li v-for="(productImage, index) in this.productImages" data-target="#carouselExampleIndicators"
+                  <li v-for="(productImage, index) in productImages" data-target="#carouselExampleIndicators"
                     :class="{ 'active': index == 0 }" :data-slide-to=index :key="index">
                     <img @click="changeDisplayImage(index, variationId)" :src="productImage.product_image"
                       class="d-block w-100">
                   </li>
                 </ol>
                 <div class="carousel-inner">
-                  <div v-for="(productImage, index) in this.productImages" class="carousel-item"  :class="{ 'active': index == 0 }" :key="index">
-                    <img @click="changeDisplayImage(index, variationId)" :src="productImage.product_image" class="d-block w-100">
+                  <div class="carousel-item"  :class="{ 'active': testIndex == 0 }">
+                    <img :src="selectedImage" class="d-block w-100">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                <button @click="prevDisplayImage(variationId)" class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
                   data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 320 512">
@@ -92,6 +90,8 @@ export default {
   data() {
     return {
       productId: '',
+      testIndex: '',
+      currentIndex : 1,
       product: '',
       productPrice: '',
       productImages: {},
@@ -116,25 +116,34 @@ export default {
     getProduct(productId) {
       axios.get(this.baseURL + 'api/singleProduct?productId=' + productId) //Single Product End point
         .then((response) => {
-          // console.log('hala',response);
+          this.testIndex = 0;
           this.product = response.data.data;
           this.productPrice = this.product.product_variation[0].formated_price;
           this.productImages = this.product.product_variation[0].product_images;
           this.selectedImage = this.product.product_variation[0].product_images[0].product_image;
           this.variationId = 0;
         }).catch(() => 'Products not available') //in case no product Available
+
     },
     changeDisplayImage(imageIndex, variationId) {
+      this.currentIndex = imageIndex + 1;
       this.selectedImage = this.product.product_variation[this.variationId].product_images[imageIndex].product_image;
 
     },
     changeFeatureImageOnClick(payload) {
-      // console.log('hala', payload.variation_id);
+      this.testIndex = 0
+      this.currentIndex = 1;
       this.variationId = payload.variation_id;
       this.productPrice = this.product.product_variation[this.variationId].formated_price;
       this.productImages = this.product.product_variation[this.variationId].product_images;
       this.selectedImage = this.product.product_variation[this.variationId].product_images[0].product_image;
 
+    },
+    prevDisplayImage(variationId){
+      let variationImages = this.product.product_variation[this.variationId].product_images;
+      if(variationImages.length > 1 && this.currentIndex > 1 ){
+        this.selectedImage = this.product.product_variation[variationId].product_images[this.currentIndex - 1].product_image;
+      }
     }
 
   }
