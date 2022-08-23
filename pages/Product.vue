@@ -14,10 +14,10 @@
           <div class="col-lg-10 col-md-9 col-sm-12">
             <div class="product-listing">
               <div class="row">
-                <div class="col-12 product-category">
+                <div class="col-md-12 product-category">
                   <h2>{{ this.slug }}</h2>
                 </div>
-                <div v-for="(product, productIndex) in products.data" class="col-4" :key="productIndex">
+                <div v-for="(product, productIndex) in products.data" class="col-md-4" :key="productIndex">
                   <Product :product="product" />
                 </div>
 
