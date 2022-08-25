@@ -25,8 +25,8 @@
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
               <form class="sp-addbag">
                 <h4>QUANTITY</h4>
-                <input type="number" min="1">
-                <button type="submit" class="continue-btn">ADD TO BAG</button>
+                <input v-model="productQuanity" type="number" min="1">
+                <button @click="addToBag()" type="button" class="continue-btn">ADD TO BAG</button>
                 <button id="fav-sp" class="continue-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path
@@ -38,38 +38,7 @@
           </div>
           <div class="col-md-8">
             <div class="sp-slider">
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li v-for="(productImage, index) in productImages" data-target="#carouselExampleIndicators"
-                    :class="{ 'active': index == 0 }" :data-slide-to=index :key="index">
-                    <img @click="changeDisplayImage(index, variationId)" :src="productImage.product_image"
-                      class="d-block w-100">
-                  </li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item"  :class="{ 'active': testIndex == 0 }">
-                    <img :src="selectedImage" class="d-block w-100">
-                  </div>
-                </div>
-                <button @click="prevDisplayImage(variationId)" class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
-                  data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512">
-                      <path
-                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" />
-                    </svg></span>
-                  <span class="sr-only">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
-                  data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512">
-                      <path
-                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
-                    </svg></span>
-                  <span class="sr-only">Next</span>
-                </button>
-              </div>
+              <DetailSlider v-if="renderDetailSlider" :productImages="productImages"/>
             </div>
           </div>
         </div>
@@ -80,70 +49,103 @@
 
 <script>
 import axios from 'axios';
+import DetailSlider from '@/components/AppDetailSlider.vue'
 import Swatch from '@/components/AppSwatch'
 import Breadcrumbs from '@/components/Breadcrumbs'
 export default {
   components: {
     Breadcrumbs,
     Swatch,
+    DetailSlider,
   },
   data() {
     return {
       productId: '',
-      testIndex: '',
-      currentIndex : 1,
       product: '',
       productPrice: '',
       productImages: {},
       selectedImage: '',
-      variationId: '',
+      variationId: '', //this is not the real variation id but the indexing of api response
       baseURL: this.$axios.defaults.baseURL, // Base Url
+      renderDetailSlider: true,
+
+      // cart oriented data
+      productQuanity: 1,
+      productVariationId: '', //this is the actual product variation id
     }
   },
   mounted() {
 
     this.getProductId();  // Get product id from URL
 
-    this.getProduct(this.productId);  // Get Product function hits axios for Product details  api
+    this.getProduct(this.productId);  // Get Product function hits axios for Product details api
 
   },
   methods: {
     getProductId() {
       let url = new URL(location.href)
       this.productId = url.searchParams.get("productId");
-      // console.log('hala', this.productId);
     },
     getProduct(productId) {
       axios.get(this.baseURL + 'api/singleProduct?productId=' + productId) //Single Product End point
         .then((response) => {
-          this.testIndex = 0;
           this.product = response.data.data;
           this.productPrice = this.product.product_variation[0].formated_price;
           this.productImages = this.product.product_variation[0].product_images;
           this.selectedImage = this.product.product_variation[0].product_images[0].product_image;
           this.variationId = 0;
+          this.productVariationId = this.product.product_variation[this.variationId].id // actual product variation id is assigned
+
         }).catch(() => 'Products not available') //in case no product Available
 
     },
-    changeDisplayImage(imageIndex, variationId) {
-      this.currentIndex = imageIndex + 1;
-      this.selectedImage = this.product.product_variation[this.variationId].product_images[imageIndex].product_image;
-
-    },
-    changeFeatureImageOnClick(payload) {
-      this.testIndex = 0
-      this.currentIndex = 1;
+    changeFeatureImageOnClick(payload) { //Swatch on click function
       this.variationId = payload.variation_id;
       this.productPrice = this.product.product_variation[this.variationId].formated_price;
       this.productImages = this.product.product_variation[this.variationId].product_images;
       this.selectedImage = this.product.product_variation[this.variationId].product_images[0].product_image;
+      this.productVariationId = this.product.product_variation[this.variationId].id // actual product variation id is assigned
+      this.productQuanity = 1
 
+      this.forceRerender(); // this function flushed the Detail Slider Component and renders it again
     },
-    prevDisplayImage(variationId){
-      let variationImages = this.product.product_variation[this.variationId].product_images;
-      if(variationImages.length > 1 && this.currentIndex > 1 ){
-        this.selectedImage = this.product.product_variation[variationId].product_images[this.currentIndex - 1].product_image;
+
+    async forceRerender() {  // Force Re-render function
+
+      this.renderDetailSlider = false; // Remove MyComponent from the DOM
+
+      await this.$nextTick(); // Wait for the change to get flushed to the DOM
+
+      this.renderDetailSlider = true; // Add the component back in
+    },
+
+    addToBag() {
+      let cartArr = []; //array where new cart data is pushed
+
+      let cart = { // collected data
+        quantity: this.productQuanity,
+        product_id: this.productId,
+        product_variation_id: this.productVariationId
       }
+
+      if (localStorage.getItem("cart") === null) { //if local stoage is does not contain cart data
+        cartArr.push(cart);
+        localStorage.setItem('cart', JSON.stringify(cartArr))
+
+      } else { // if local storage contains cart data
+        var cartData = localStorage.getItem('cart')
+        cartData = JSON.parse(cartData)
+
+        if (cartData.find(o => o.product_id === cart.product_id) && cartData.find(o => o.product_variation_id === cart.product_variation_id)) { // if the product already exists in the cart
+          let index = cartData.findIndex(o => o.product_id === cart.product_id) // index of product
+          cartData.splice(index, 1); // removing the product object
+          cartData.push(cart) // pushing the updated product data
+        } else { //if the product is newly added
+          cartData.push(cart)
+        }
+        localStorage.setItem('cart', JSON.stringify(cartData)) //cart data is updated
+      }
+
     }
 
   }
