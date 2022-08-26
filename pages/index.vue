@@ -2,27 +2,26 @@
   <div>
     <section v-if="banners" class="banner-section">
       <AppBanner :banners='banners' />
-      <!-- <Nuxt /> -->
     </section>
 
-    <section v-if="this.collections" class="about-section">
+    <section v-if="collections.length > 0" class="about-section">
       <div class="container">
         <div class="main-box">
           <h2>FABULOUS Gifts</h2>
           <div class="row">
-            <div v-if="this.collectionImage1" class="col-md-4 left-img">
+            <div v-if="collectionImage1" class="col-md-4 left-img">
               <img :src="collectionImage1">
             </div>
             <div class="col-md-8">
               <div class="about-img">
                 <div class="row">
-                  <div v-if="this.collectionImage2" class="col-md-12">
+                  <div v-if="collectionImage2" class="col-md-12">
                     <img :src="collectionImage2">
                   </div>
-                  <div v-if="this.collectionImage3" class="col-md-6">
+                  <div v-if="collectionImage3" class="col-md-6">
                     <img :src="collectionImage3">
                   </div>
-                  <div v-if="this.collectionImage4" class="col-md-6">
+                  <div v-if="collectionImage4" class="col-md-6">
                     <img :src="collectionImage4">
                   </div>
                 </div>
@@ -32,7 +31,7 @@
         </div>
       </div>
     </section>
-    <section v-if="this.promotions.length > 0" class="shop-section">
+    <section v-if="promotions.length > 0" class="shop-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 p-0">
@@ -50,35 +49,31 @@
         </div>
       </div>
     </section>
-    <section v-if="this.instagram" class="instagram-section">
+    <section v-if="instagram" class="instagram-section">
       <div class="container">
         <div class="main-insta">
           <h2>connect with us</h2>
         </div>
         <div class="inst-img">
           <div class="main-insta">
-            <a :href=this.instagramPost1.permalink target="_blank">
-              <img :src="this.instagramPost1.media_url">
+            <a :href=instagramPost1.permalink target="_blank">
+              <img :src="instagramPost1.media_url">
             </a>
-            <!-- <h2>{{ instagramPost1.id }}</h2> -->
           </div>
           <div class="main-insta">
-            <a :href=this.instagramPost2.permalink target="_blank">
-              <img :src="this.instagramPost2.media_url">
+            <a :href=instagramPost2.permalink target="_blank">
+              <img :src="instagramPost2.media_url">
             </a>
-            <!-- <h2>{{ instagramPost2.id }}</h2> -->
           </div>
           <div class="main-insta">
-            <a :href=this.instagramPost3.permalink target="_blank">
-              <img :src="this.instagramPost3.media_url">
+            <a :href=instagramPost3.permalink target="_blank">
+              <img :src="instagramPost3.media_url">
             </a>
-            <!-- <h2>{{ instagramPost3.id }}</h2> -->
           </div>
           <div class="main-insta">
-            <a :href=this.instagramPost4.permalink target="_blank">
-              <img :src="this.instagramPost4.media_url">
+            <a :href=instagramPost4.permalink target="_blank">
+              <img :src="instagramPost4.media_url">
             </a>
-            <!-- <h2>{{ instagramPost4.id }}</h2> -->
           </div>
         </div>
       </div>
@@ -144,7 +139,7 @@ export default {
           this.banners = data.banners
           this.collections = data.collections
           this.promotions = data.promotions
-          this.instagram_access_token = data.hasOwnProperty("instagram") ? data.instagram[0].access_token : '' //IG access token from DB
+          this.instagram_access_token = data.instagram.length > 0 ? data.instagram[0].access_token : '' //IG access token from DB
 
 
           //Declaring Collections
