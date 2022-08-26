@@ -58,21 +58,24 @@
           <div class="right-menu">
             <ul>
               <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <strong>Rs</strong> Currency
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <ul>
-                      <li><nuxt-link to="/"> Euror</nuxt-link>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <strong>Rs</strong> Currency
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul>
+                    <li>
+                      <nuxt-link to="/"> Euror</nuxt-link>
                     </li>
                     <li>
-                    <nuxt-link to="/"> Pakistan</nuxt-link></li>
-                     <li>
-                    <nuxt-link to="/"> Dollar</nuxt-link></li>
-                    </ul>
-                    </div>
-                  </li>
+                      <nuxt-link to="/"> Pakistan</nuxt-link>
+                    </li>
+                    <li>
+                      <nuxt-link to="/"> Dollar</nuxt-link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li>
                 <nuxt-link to="/" data-toggle="modal" data-target="#exampleModalCenter">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -119,43 +122,36 @@
                         <div class="btn-checkout">
                           <button type="button" class="btn btn-continue" data-dismiss="modal">Continue Shopping</button>
                           <button type="button" class="btn btn-continue">Checkout</button>
-
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
-               <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      My Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <ul>
-                      <li><nuxt-link to="register"> Register</nuxt-link>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  My Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul>
+                    <li>
+                      <nuxt-link to="register"> Register</nuxt-link>
                     </li>
                     <li>
-                    <nuxt-link to="login"> Login</nuxt-link></li>
-                    </ul>
-                     
-
-                    </div>
-                  </li>
-
-
+                      <nuxt-link to="login"> Login</nuxt-link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-
           </div>
         </div>
         <div class="header-end">
           <div class="header-inner">
-
             <div class="row mb-0">
               <div class="col-12">
                 <nuxt-link to="/"><img src="~/assets/images/mjjlogo.svg"></nuxt-link>
-
               </div>
               <div class="col-12">
                 <ul class="navbar">
@@ -172,10 +168,9 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
-
                     </div>
                   </li>
-                 <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Men
@@ -187,7 +182,6 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
-
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -198,7 +192,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">Travel Bags / Trolleys </nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Toiletry Cases</nuxt-link>
-                      <nuxt-link to="/" class="dropdown-item">  Passport holders</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Passport holders</nuxt-link>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -214,7 +208,7 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Gifts
+                      Gifts
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">Gift Sets</nuxt-link>
@@ -222,20 +216,19 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item"> Buy A Gift Voucher</nuxt-link>
                     </div>
-                  </li> 
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     The House of MJ
+                      The House of MJ
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">History</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">YouTube Videos</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion shows</nuxt-link>
-                       <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
                     </div>
                   </li>
-
                   <!-- <div class="sub-menu">
                     <div class="container">
                       <div class="row">
@@ -286,26 +279,19 @@
                       </div>
                     </div>
                   </div> -->
-
-
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
-
     <!-- MOBILE HEADER START -->
     <div class="mobile-header">
       <div class="header-middle">
         <div class="header-inner">
           <div class="row mb-0 align-items-center">
             <div class="col-3">
-
-
               <!-- Toggler -->
               <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" class="btn btn-primary"
                 aria-controls="#sidenav-1" aria-haspopup="true">
@@ -361,10 +347,9 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
-
                     </div>
                   </li>
-                 <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Men
@@ -376,7 +361,6 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Travel</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion Show</nuxt-link>
-
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -387,7 +371,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">Travel Bags / Trolleys </nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Toiletry Cases</nuxt-link>
-                      <nuxt-link to="/" class="dropdown-item">  Passport holders</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item"> Passport holders</nuxt-link>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -403,7 +387,7 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Gifts
+                      Gifts
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">Gift Sets</nuxt-link>
@@ -411,20 +395,19 @@
                       <nuxt-link to="/" class="dropdown-item"> Accessories</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item"> Buy A Gift Voucher</nuxt-link>
                     </div>
-                  </li> 
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     The House of MJ
+                      The House of MJ
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <nuxt-link to="/" class="dropdown-item">History</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">YouTube Videos</nuxt-link>
                       <nuxt-link to="/" class="dropdown-item">Fashion shows</nuxt-link>
-                       <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
+                      <nuxt-link to="/" class="dropdown-item">Story</nuxt-link>
                     </div>
                   </li>
-
                   <!-- <div class="sub-menu">
                     <div class="container">
                       <div class="row">
@@ -475,12 +458,9 @@
                       </div>
                     </div>
                   </div> -->
-
-
                 </ul>
               </nav>
               <!-- Sidenav -->
-
             </div>
             <div class="col-6">
               <img src="~/assets/images/mjjlogo.svg">
@@ -491,13 +471,10 @@
                 <path
                   d="M352 160v-32C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128v32H0v272c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V160h-96zm-192-32c0-35.29 28.71-64 64-64s64 28.71 64 64v32H160v-32zm160 120c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zm-192 0c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24z" />
               </svg>
-
             </div>
-
           </div>
         </div>
       </div>
-
       <div class="header-end">
         <div class="container">
           <div class="row">
@@ -530,12 +507,14 @@
                       My Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <ul>
-                      <li><nuxt-link to="register"> Register</nuxt-link>
-                    </li>
-                    <li>
-                    <nuxt-link to="login"> Login</nuxt-link></li>
-                    </ul>
+                      <ul>
+                        <li>
+                          <nuxt-link to="register"> Register</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="login"> Login</nuxt-link>
+                        </li>
+                      </ul>
                     </div>
                   </li>
                   <!-- <li>
@@ -552,14 +531,17 @@
                       <strong>Rs</strong> Currency
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <ul>
-                      <li><nuxt-link to="/"> Euror</nuxt-link>
-                    </li>
-                    <li>
-                    <nuxt-link to="/"> Pakistan</nuxt-link></li>
-                     <li>
-                    <nuxt-link to="/"> Dollar</nuxt-link></li>
-                    </ul>
+                      <ul>
+                        <li>
+                          <nuxt-link to="/"> Euror</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/"> Pakistan</nuxt-link>
+                        </li>
+                        <li>
+                          <nuxt-link to="/"> Dollar</nuxt-link>
+                        </li>
+                      </ul>
                     </div>
                   </li>
                 </ul>
@@ -570,9 +552,7 @@
       </div>
     </div>
   </div>
-
 </template>
-
 <script>
   export default {
     name: 'AppHeader'

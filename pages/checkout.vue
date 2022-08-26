@@ -295,6 +295,22 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-md-12 bank-trf">
+                    <div class="checkout-bar">
+                      <h3>Bank Transfer Instructions</h3>
+                      <p>Please transfer the total amount to the following bank account.</p>
+                      <div class="checkout-leftbar right-layout">
+                        <div class="message-area">
+                          <ul>
+                            <li>Bank: Habib Metropolitan Bank Ltd</li>
+                            <li>Account No.: 6-01-25-20311-714-123540</li>
+                            <li>Title: M Jafferjees</li>
+                            <li>Your Order will be shipped upon receipt of payment.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="col-md-12">
                     <div class="checkout-bar">
                       <div class="checkout-leftbar right-layout">

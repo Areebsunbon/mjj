@@ -36,11 +36,7 @@
                     <p> View Map</p>
                   </nuxt-link>
                 </div>
-
-
-
               </div>
-
             </div>
             <div class="col-md-4">
              <div class="locator-box">
@@ -68,26 +64,21 @@
                 </ul>
                 <div class="map-area">
                   <nuxt-link to="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"> 
                       <path
                         d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
                     </svg>
                     <p> View Map</p>
                   </nuxt-link>
-
                 </div>
-
-
-
-
               </div>
-
             </div>
             <div class="col-md-4">
               <div class="locator-box">
                 <h3>islamabad</h3>
                 <h4>THE CENTAURUS MALL</h4>
                 <p>Shop # 187, Level - 1, The Centaurus Mall 1- Jinnah Avenue, Sector F-8, Islamabad – Pakistan </p>
+          
                 <div class="border"></div>
                 <h5>TELEPHONE</h5>
                 <nuxt-link to="#">+9251 - 2701186-87</nuxt-link>
@@ -95,9 +86,7 @@
                 <ul>
                   <li>Monday-Sunday 10:00 am to 10:00 pm</li>
                   <li>Friday Break 01:00 pm to 03:00 pm</li>
-
                 </ul>
-
                 <div class="map-area">
                   <nuxt-link to="#">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -107,20 +96,11 @@
                     <p> View Map</p>
                   </nuxt-link>
                 </div>
-
-
-
               </div>
-
             </div>
-
           </div>
         </div>
-
-
       </div>
-
-
     </section>
   </div>
 </template>

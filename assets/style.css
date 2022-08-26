@@ -1612,6 +1612,19 @@ img.insta-img {
 .checkout-bar {
     margin-top: 15px;
 }
+.bank-trf ul{
+    margin: 0px;
+}
+.bank-trf {
+    margin-top: 30px;
+}
+.bank-trf li {
+    font-size: 14px;
+    font-family: 'GillSansStd';
+    text-transform: capitalize;
+    color: #4e4e4e;
+    line-height: 23px;
+}
 .message-area label {
     font-size: 14px;
     color: #000;
