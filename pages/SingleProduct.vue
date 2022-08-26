@@ -18,10 +18,8 @@
               <p>COLOR</p>
               <ul class="product-color">
                 <li v-for="(variation, index) in product.product_variation" :key="index">
-
                   <Swatch :variation="variation" :variationId="index"
                     v-on:changeFeatureImageOnClick="changeFeatureImageOnClick" />
-
                 </li>
               </ul>
               <nuxt-link to="/" class="btn-print continue-btn">PRINT MY NAME</nuxt-link>
